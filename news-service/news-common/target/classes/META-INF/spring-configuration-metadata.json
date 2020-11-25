@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "tengxunyun",
+      "type": "com.ltz.news.utils.extend.TengxunyunResource",
+      "sourceType": "com.ltz.news.utils.extend.TengxunyunResource"
+    }
+  ],
+  "properties": [
+    {
+      "name": "tengxunyun.secret-id",
+      "type": "java.lang.String",
+      "sourceType": "com.ltz.news.utils.extend.TengxunyunResource"
+    },
+    {
+      "name": "tengxunyun.secret-key",
+      "type": "java.lang.String",
+      "sourceType": "com.ltz.news.utils.extend.TengxunyunResource"
+    }
+  ],
+  "hints": []
+}

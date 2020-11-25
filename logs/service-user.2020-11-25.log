@@ -1,0 +1,244 @@
+2020-11-25 21:41:14.753 [main] INFO  com.ltz.news.UserApplication - No active profile set, falling back to default profiles: default
+2020-11-25 21:41:16.809 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-25 21:41:16.814 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-25 21:41:16.958 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 107ms. Found 0 Redis repository interfaces.
+2020-11-25 21:41:17.302 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.ltz.news]' package. Please check your configuration.
+2020-11-25 21:41:17.456 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=400773e0-24d3-301b-b517-68788d365bb9
+2020-11-25 21:41:18.439 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (http)
+2020-11-25 21:41:18.458 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8003"]
+2020-11-25 21:41:18.459 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-25 21:41:18.459 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-11-25 21:41:18.782 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-25 21:41:18.782 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3998 ms
+2020-11-25 21:41:21.144 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-11-25 21:41:21.236 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-11-25 21:41:21.236 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-25 21:41:21.245 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-11-25 21:41:21.245 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-25 21:41:21.467 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-25 21:41:21.663 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-11-25 21:41:21.665 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-11-25 21:41:21.666 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-11-25 21:41:21.667 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2020-11-25 21:41:24.046 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-11-25 21:41:24.314 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8003"]
+2020-11-25 21:41:24.363 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (http) with context path ''
+2020-11-25 21:41:27.210 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-11-25 21:41:27.210 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-11-25 21:41:27.240 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-11-25 21:41:27.322 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-11-25 21:41:27.611 [main] INFO  com.ltz.news.UserApplication - Started UserApplication in 21.08 seconds (JVM running for 24.28)
+2020-11-25 21:41:41.750 [http-nio-8003-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-25 21:41:41.751 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-25 21:41:41.763 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2020-11-25 21:41:43.580 [http-nio-8003-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.PassportServiceImpl.getSMSCode====
+2020-11-25 21:41:43.601 [http-nio-8003-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：21
+2020-11-25 21:42:04.706 [http-nio-8003-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.PassportServiceImpl.doLogin====
+2020-11-25 21:42:04.713 [http-nio-8003-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.queryMobileIsExist====
+2020-11-25 21:42:04.964 [http-nio-8003-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Starting...
+2020-11-25 21:42:05.178 [http-nio-8003-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Start completed.
+2020-11-25 21:42:05.232 [http-nio-8003-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：519
+2020-11-25 21:42:05.254 [http-nio-8003-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：548
+2020-11-25 21:42:05.521 [http-nio-8003-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 21:42:05.553 [http-nio-8003-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：32
+2020-11-25 21:55:20.015 [http-nio-8003-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.PassportServiceImpl.getSMSCode====
+2020-11-25 21:55:20.017 [http-nio-8003-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-11-25 21:55:28.520 [http-nio-8003-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.PassportServiceImpl.doLogin====
+2020-11-25 21:55:28.522 [http-nio-8003-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.queryMobileIsExist====
+2020-11-25 21:55:28.538 [http-nio-8003-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：16
+2020-11-25 21:55:28.544 [http-nio-8003-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：24
+2020-11-25 21:55:28.786 [http-nio-8003-exec-9] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 21:55:28.790 [http-nio-8003-exec-9] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：4
+2020-11-25 21:55:29.957 [http-nio-8003-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 21:55:29.960 [http-nio-8003-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
+2020-11-25 21:55:29.961 [http-nio-8003-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 21:55:29.963 [http-nio-8003-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-11-25 21:55:33.475 [http-nio-8003-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 21:55:33.477 [http-nio-8003-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-11-25 21:55:50.953 [http-nio-8003-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 21:55:50.956 [http-nio-8003-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
+2020-11-25 21:55:53.416 [http-nio-8003-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 21:55:53.418 [http-nio-8003-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-11-25 21:55:58.338 [http-nio-8003-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 21:55:58.341 [http-nio-8003-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
+2020-11-25 21:57:21.034 [http-nio-8003-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.PassportServiceImpl.getSMSCode====
+2020-11-25 21:57:21.037 [http-nio-8003-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
+2020-11-25 21:57:29.643 [http-nio-8003-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.PassportServiceImpl.doLogin====
+2020-11-25 21:57:29.646 [http-nio-8003-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.queryMobileIsExist====
+2020-11-25 21:57:29.651 [http-nio-8003-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：5
+2020-11-25 21:57:29.657 [http-nio-8003-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：13
+2020-11-25 21:57:29.932 [http-nio-8003-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 21:57:29.940 [http-nio-8003-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：8
+2020-11-25 21:58:19.668 [http-nio-8003-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 21:58:19.682 [http-nio-8003-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：14
+2020-11-25 21:58:28.847 [http-nio-8003-exec-9] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 21:58:28.851 [http-nio-8003-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 21:58:28.853 [http-nio-8003-exec-9] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：5
+2020-11-25 21:58:28.853 [http-nio-8003-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-11-25 21:58:30.249 [http-nio-8003-exec-7] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 21:58:30.253 [http-nio-8003-exec-7] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：4
+2020-11-25 21:58:31.534 [http-nio-8003-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 21:58:31.537 [http-nio-8003-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
+2020-11-25 21:58:31.563 [http-nio-8003-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.ltz.news.interceptors.BaseInterceptor.verifyUserIdToken(BaseInterceptor.java:30)
+	at com.ltz.news.interceptors.UserTokenInterceptor.preHandle(UserTokenInterceptor.java:25)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:141)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-25 21:59:18.436 [http-nio-8003-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 21:59:18.439 [http-nio-8003-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-11-25 21:59:48.089 [main] INFO  com.ltz.news.UserApplication - No active profile set, falling back to default profiles: default
+2020-11-25 21:59:49.584 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-25 21:59:49.589 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-25 21:59:49.677 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67ms. Found 0 Redis repository interfaces.
+2020-11-25 21:59:49.926 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.ltz.news]' package. Please check your configuration.
+2020-11-25 21:59:50.040 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=400773e0-24d3-301b-b517-68788d365bb9
+2020-11-25 21:59:50.847 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (http)
+2020-11-25 21:59:50.862 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8003"]
+2020-11-25 21:59:50.862 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-25 21:59:50.863 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-11-25 21:59:51.142 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-25 21:59:51.143 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3027 ms
+2020-11-25 21:59:53.183 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-11-25 21:59:53.261 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-11-25 21:59:53.261 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-25 21:59:53.268 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-11-25 21:59:53.268 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-25 21:59:53.443 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-25 21:59:53.616 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-11-25 21:59:53.617 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-11-25 21:59:53.618 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-11-25 21:59:53.618 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2020-11-25 21:59:56.055 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-11-25 21:59:56.285 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8003"]
+2020-11-25 21:59:56.327 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (http) with context path ''
+2020-11-25 21:59:58.308 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-11-25 21:59:58.308 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-11-25 21:59:58.332 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-11-25 21:59:58.395 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-11-25 21:59:58.627 [main] INFO  com.ltz.news.UserApplication - Started UserApplication in 15.755 seconds (JVM running for 17.973)
+2020-11-25 22:00:16.777 [http-nio-8003-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-25 22:00:16.778 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-25 22:00:16.790 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2020-11-25 22:00:18.449 [http-nio-8003-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.PassportServiceImpl.getSMSCode====
+2020-11-25 22:00:18.466 [http-nio-8003-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：17
+2020-11-25 22:00:27.752 [http-nio-8003-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.PassportServiceImpl.doLogin====
+2020-11-25 22:00:27.759 [http-nio-8003-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.queryMobileIsExist====
+2020-11-25 22:00:28.013 [http-nio-8003-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Starting...
+2020-11-25 22:00:28.195 [http-nio-8003-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Start completed.
+2020-11-25 22:00:28.235 [http-nio-8003-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：476
+2020-11-25 22:00:28.257 [http-nio-8003-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：505
+2020-11-25 22:00:28.547 [http-nio-8003-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 22:00:28.575 [http-nio-8003-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：28
+2020-11-25 22:00:48.587 [http-nio-8003-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 22:00:48.589 [http-nio-8003-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-11-25 22:00:50.042 [http-nio-8003-exec-7] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 22:00:50.044 [http-nio-8003-exec-7] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-11-25 22:02:56.501 [http-nio-8003-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.PassportServiceImpl.getSMSCode====
+2020-11-25 22:02:56.503 [http-nio-8003-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-11-25 22:03:05.314 [http-nio-8003-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.PassportServiceImpl.doLogin====
+2020-11-25 22:03:05.316 [http-nio-8003-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.queryMobileIsExist====
+2020-11-25 22:03:05.322 [http-nio-8003-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：6
+2020-11-25 22:03:05.325 [http-nio-8003-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：10
+2020-11-25 22:03:05.571 [http-nio-8003-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 22:03:05.574 [http-nio-8003-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
+2020-11-25 22:03:52.515 [http-nio-8003-exec-9] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 22:03:52.517 [http-nio-8003-exec-9] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-11-25 22:03:52.517 [http-nio-8003-exec-7] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 22:03:52.521 [http-nio-8003-exec-7] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：4
+2020-11-25 22:03:55.989 [http-nio-8003-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 22:03:55.991 [http-nio-8003-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 22:03:55.993 [http-nio-8003-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：4
+2020-11-25 22:03:55.994 [http-nio-8003-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-11-25 22:04:00.429 [http-nio-8003-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 22:04:00.432 [http-nio-8003-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-11-25 22:04:01.655 [http-nio-8003-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 22:04:01.658 [http-nio-8003-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-11-25 22:04:01.679 [http-nio-8003-exec-9] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getAccountInfo====
+2020-11-25 22:04:01.687 [http-nio-8003-exec-9] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：7
+2020-11-25 22:04:17.781 [http-nio-8003-exec-8] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.updateUserInfo====
+2020-11-25 22:04:17.941 [http-nio-8003-exec-8] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：160
+2020-11-25 22:04:19.210 [http-nio-8003-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 22:04:19.214 [http-nio-8003-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getAccountInfo====
+2020-11-25 22:04:19.224 [http-nio-8003-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：14
+2020-11-25 22:04:19.249 [http-nio-8003-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：34
+2020-11-25 22:04:28.933 [http-nio-8003-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 22:04:28.937 [http-nio-8003-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
+2020-11-25 22:04:32.407 [http-nio-8003-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 22:04:32.411 [http-nio-8003-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
+2020-11-25 22:04:32.431 [http-nio-8003-exec-7] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getAccountInfo====
+2020-11-25 22:04:32.434 [http-nio-8003-exec-7] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-11-25 22:04:33.903 [http-nio-8003-exec-8] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 22:04:33.906 [http-nio-8003-exec-8] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-11-25 22:04:35.118 [http-nio-8003-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 22:04:35.124 [http-nio-8003-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：6
+2020-11-25 22:04:36.495 [http-nio-8003-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 22:04:36.497 [http-nio-8003-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-11-25 22:04:42.392 [http-nio-8003-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-11-25 22:04:42.394 [http-nio-8003-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：1
+2020-11-25 22:04:46.023 [http-nio-8003-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.PassportServiceImpl.logout====
+2020-11-25 22:04:46.025 [http-nio-8003-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：1
+2020-11-25 22:05:06.708 [lettuce-nioEventLoop-4-1] INFO  i.l.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-25 22:05:06.814 [lettuce-eventExecutorLoop-1-8] INFO  i.l.core.protocol.ConnectionWatchdog - Reconnecting, last destination was /127.0.0.1:6379
+2020-11-25 22:05:08.828 [lettuce-nioEventLoop-4-2] WARN  i.l.core.protocol.ConnectionWatchdog - Cannot reconnect to [127.0.0.1:6379]: Connection refused: no further information: /127.0.0.1:6379
