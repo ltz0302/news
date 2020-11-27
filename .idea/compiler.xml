@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="news-files" />
+        <module name="news-user" />
         <module name="mybatis-generator-database" />
+        <module name="news-common" />
         <module name="news-api" />
         <module name="news-model" />
-        <module name="news-common" />
-        <module name="news-user" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +23,7 @@
       <module name="mybatis-generator" options="" />
       <module name="news-api" options="-parameters" />
       <module name="news-common" options="-parameters" />
+      <module name="news-files" options="-parameters" />
       <module name="news-model" options="-parameters" />
       <module name="news-service" options="" />
       <module name="news-user" options="-parameters" />

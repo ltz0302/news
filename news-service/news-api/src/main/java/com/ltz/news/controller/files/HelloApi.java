@@ -1,4 +1,4 @@
-package com.ltz.news.controller.user;
+package com.ltz.news.controller.files;
 
 
 import io.swagger.annotations.Api;

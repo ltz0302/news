@@ -9,7 +9,6 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>news-service</module>
-        <module>news-model</module>
     </modules>
 
     <!-- 项目的打包类型, 即项目的发布形式, 默认为 jar. 对于聚合项目的父模块来说, 必须指定为 pom -->
@@ -35,14 +34,14 @@
         <okhttp.version>4.2.2</okhttp.version>
         <jackson.version>2.10.2</jackson.version>
 
-        <commons-codec.version>1.9</commons-codec.version>
+        <commons-codec.version>1.15</commons-codec.version>
         <commons-lang3.version>3.4</commons-lang3.version>
         <commons-fileupload.version>1.4</commons-fileupload.version>
         <google-guava.version>28.2-jre</google-guava.version>
 
         <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
         <swagger-bootstrap-ui.version>1.9.6</swagger-bootstrap-ui.version>
-        <fastdfs.version>1.27.2</fastdfs.version>
+<!--        <fastdfs.version>1.27.2</fastdfs.version>-->
 
         <slf4j.version>1.7.21</slf4j.version>
         <joda-time.version>2.10.6</joda-time.version>
@@ -50,7 +49,7 @@
         <mongodb-driver.version>3.11.1</mongodb-driver.version>
         <lombock.version>1.18.8</lombock.version>
         <fastjson.version>1.2.51</fastjson.version>
-
+        <cos_api.version>5.6.24</cos_api.version>
     </properties>
 
 
@@ -163,11 +162,11 @@
             </dependency>
 
             <!-- 文件上传fdfs工具 -->
-            <dependency>
-                <groupId>com.github.tobato</groupId>
-                <artifactId>fastdfs-client</artifactId>
-                <version>${fastdfs.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.github.tobato</groupId>-->
+<!--                <artifactId>fastdfs-client</artifactId>-->
+<!--                <version>${fastdfs.version}</version>-->
+<!--            </dependency>-->
 
             <!-- joda-time 时间工具 -->
             <dependency>
@@ -189,6 +188,12 @@
                 <version>${fastjson.version}</version>
             </dependency>
 
+
+            <dependency>
+                <groupId>com.qcloud</groupId>
+                <artifactId>cos_api</artifactId>
+                <version>${cos_api.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>

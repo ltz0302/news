@@ -12,6 +12,7 @@
       <set>
         <option value="$PROJECT_DIR$/mybatis-generator/pom.xml" />
         <option value="$PROJECT_DIR$/news-common/pom.xml" />
+        <option value="$PROJECT_DIR$/news-files/pom.xml" />
         <option value="$PROJECT_DIR$/news-model/pom.xml" />
       </set>
     </option>

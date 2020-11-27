@@ -16,6 +16,7 @@
         <module>news-user</module>
         <module>news-api</module>
         <module>news-model</module>
+        <module>news-files</module>
     </modules>
 
 </project>

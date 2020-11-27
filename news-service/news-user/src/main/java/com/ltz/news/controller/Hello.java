@@ -2,7 +2,7 @@ package com.ltz.news.controller;
 
 
 
-import com.ltz.news.controller.user.HelloApi;
+import com.ltz.news.controller.files.HelloApi;
 import com.ltz.news.result.GraceJSONResult;
 import com.ltz.news.utils.RedisOperator;
 import org.slf4j.Logger;

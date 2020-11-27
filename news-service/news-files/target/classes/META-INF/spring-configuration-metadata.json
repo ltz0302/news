@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "file",
+      "type": "com.ltz.news.resource.FileResource",
+      "sourceType": "com.ltz.news.resource.FileResource"
+    }
+  ],
+  "properties": [
+    {
+      "name": "file.bucket-name",
+      "type": "java.lang.String",
+      "sourceType": "com.ltz.news.resource.FileResource"
+    },
+    {
+      "name": "file.cos-host",
+      "type": "java.lang.String",
+      "sourceType": "com.ltz.news.resource.FileResource"
+    },
+    {
+      "name": "file.object-name",
+      "type": "java.lang.String",
+      "sourceType": "com.ltz.news.resource.FileResource"
+    }
+  ],
+  "hints": []
+}
