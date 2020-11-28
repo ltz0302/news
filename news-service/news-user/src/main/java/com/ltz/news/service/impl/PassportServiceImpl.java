@@ -1,5 +1,6 @@
 package com.ltz.news.service.impl;
 
+import com.ltz.news.constant.Constant;
 import com.ltz.news.pojo.bo.RegistLoginBO;
 import com.ltz.news.constant.UserStatus;
 import com.ltz.news.pojo.AppUser;
@@ -21,7 +22,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 import java.util.UUID;
 
-import static com.ltz.news.constant.Constant.*;
 
 
 @Service
@@ -42,7 +42,7 @@ public class PassportServiceImpl implements IPassportService {
         String userIp = IPUtil.getRequestIp(request);
 
         // 根据用户的ip进行限制，限制用户在60秒内只能获得一次验证码
-        redis.setnx60s(MOBILE_SMSCODE + ":" + userIp, userIp);
+        redis.setnx60s(Constant.MOBILE_SMSCODE + ":" + userIp, userIp);
 
         // 生成随机验证码并且发送短信
         String random = (int)((Math.random() * 9 + 1) * 100000) + "";
@@ -51,7 +51,7 @@ public class PassportServiceImpl implements IPassportService {
 //        smsUtils.sendSMS(mobile, random);
 
         // 把验证码存入redis，用于后续进行验证
-        redis.set(MOBILE_SMSCODE + ":" + mobile, random, 30 * 60);
+        redis.set(Constant.MOBILE_SMSCODE + ":" + mobile, random, 30 * 60);
 
         return GraceJSONResult.ok();
     }
@@ -70,7 +70,7 @@ public class PassportServiceImpl implements IPassportService {
 
 
         // 1. 校验验证码是否匹配
-        String redisSMSCode = redis.get(MOBILE_SMSCODE + ":" + mobile);
+        String redisSMSCode = redis.get(Constant.MOBILE_SMSCODE + ":" + mobile);
         if (StringUtils.isBlank(redisSMSCode) || !redisSMSCode.equalsIgnoreCase(smsCode)) {
             return GraceJSONResult.errorCustom(ResponseStatusEnum.SMS_CODE_ERROR);
         }
@@ -90,16 +90,16 @@ public class PassportServiceImpl implements IPassportService {
         if (userActiveStatus != UserStatus.FROZEN.type) {
             // 保存token到redis
             String uToken = UUID.randomUUID().toString();
-            redis.set(REDIS_USER_TOKEN + ":" + user.getId(), uToken);
-            redis.set(REDIS_USER_INFO + ":" + user.getId(), JsonUtils.objectToJson(user));
+            redis.set(Constant.REDIS_USER_TOKEN + ":" + user.getId(), uToken);
+            redis.set(Constant.REDIS_USER_INFO + ":" + user.getId(), JsonUtils.objectToJson(user));
 
             // 保存用户id和token到cookie中
-            ControllerUtils.setCookie(request, response, "utoken", uToken, COOKIE_MONTH);
-            ControllerUtils.setCookie(request, response, "uid", user.getId(), COOKIE_MONTH);
+            ControllerUtils.setCookie(request, response, "utoken", uToken, Constant.COOKIE_MONTH);
+            ControllerUtils.setCookie(request, response, "uid", user.getId(), Constant.COOKIE_MONTH);
         }
 
 //        // 4. 用户登录或注册成功以后，需要删除redis中的短信验证码，验证码只能使用一次，用过后则作废
-        redis.del(MOBILE_SMSCODE + ":" + mobile);
+        redis.del(Constant.MOBILE_SMSCODE + ":" + mobile);
 
         // 5. 返回用户状态
         return GraceJSONResult.ok(userActiveStatus);
@@ -109,10 +109,10 @@ public class PassportServiceImpl implements IPassportService {
     @Override
     public GraceJSONResult logout(String userId, HttpServletRequest request, HttpServletResponse response) {
 
-        redis.del(REDIS_USER_TOKEN + ":" + userId);
+        redis.del(Constant.REDIS_USER_TOKEN + ":" + userId);
 
-        ControllerUtils.setCookie(request, response, "utoken", "", COOKIE_DELETE);
-        ControllerUtils.setCookie(request, response, "uid", "", COOKIE_DELETE);
+        ControllerUtils.setCookie(request, response, "utoken", "", Constant.COOKIE_DELETE);
+        ControllerUtils.setCookie(request, response, "uid", "", Constant.COOKIE_DELETE);
 
         return GraceJSONResult.ok();
     }

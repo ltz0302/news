@@ -1,6 +1,7 @@
 package com.ltz.news.config;
 
 
+import com.ltz.news.interceptors.AdminTokenInterceptor;
 import com.ltz.news.interceptors.PassportInterceptor;
 import com.ltz.news.interceptors.UserActiveInterceptor;
 import com.ltz.news.interceptors.UserTokenInterceptor;
@@ -25,6 +26,10 @@ public class InterceptorConfig implements WebMvcConfigurer {
         return new UserActiveInterceptor();
     }
 
+    @Bean
+    public AdminTokenInterceptor adminTokenInterceptor() {
+        return new AdminTokenInterceptor();
+    }
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
@@ -41,6 +46,18 @@ public class InterceptorConfig implements WebMvcConfigurer {
 //                .addPathPatterns("/fs/uploadSomeFiles")
 //                .addPathPatterns("/fans/follow")
 //                .addPathPatterns("/fans/unfollow");
+
+//        registry.addInterceptor(adminTokenInterceptor())
+//                .addPathPatterns("/adminMng/adminIsExist")
+//                .addPathPatterns("/adminMng/addNewAdmin")
+//                .addPathPatterns("/adminMng/getAdminList")
+//                .addPathPatterns("/fs/uploadToGridFS")
+//                .addPathPatterns("/fs/readInGridFS")
+//                .addPathPatterns("/friendLinkMng/saveOrUpdateFriendLink")
+//                .addPathPatterns("/friendLinkMng/getFriendLinkList")
+//                .addPathPatterns("/friendLinkMng/delete")
+//                .addPathPatterns("/categoryMng/saveOrUpdateCategory")
+//                .addPathPatterns("/categoryMng/getCatList");
     }
 
 }

@@ -1,5 +1,6 @@
 package com.ltz.news.utils;
 
+import com.ltz.news.constant.Constant;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.BindingResult;
@@ -64,5 +65,17 @@ public class ControllerUtils {
 //        cookie.setDomain(DOMAIN_NAME);
         cookie.setPath("/");
         response.addCookie(cookie);
+    }
+
+    public static void deleteCookie(HttpServletRequest request,
+                             HttpServletResponse response,
+                             String cookieName) {
+        try {
+            String deleteValue = URLEncoder.encode("", "utf-8");
+            setCookieValue(request, response, cookieName, deleteValue, Constant.COOKIE_DELETE);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
     }
 }

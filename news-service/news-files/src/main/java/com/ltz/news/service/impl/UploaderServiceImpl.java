@@ -1,10 +1,17 @@
 package com.ltz.news.service.impl;
 
+import com.ltz.news.exception.GraceException;
+import com.ltz.news.pojo.bo.NewAdminBO;
 import com.ltz.news.resource.FileResource;
 import com.ltz.news.result.GraceJSONResult;
 import com.ltz.news.result.ResponseStatusEnum;
 import com.ltz.news.service.IUploaderService;
+import com.ltz.news.utils.FileUtils;
 import com.ltz.news.utils.extend.TengxunyunResource;
+import com.mongodb.client.gridfs.GridFSBucket;
+import com.mongodb.client.gridfs.GridFSFindIterable;
+import com.mongodb.client.gridfs.model.GridFSFile;
+import com.mongodb.client.model.Filters;
 import com.qcloud.cos.COSClient;
 import com.qcloud.cos.ClientConfig;
 import com.qcloud.cos.auth.BasicCOSCredentials;
@@ -14,15 +21,18 @@ import com.qcloud.cos.model.PutObjectResult;
 
 import com.qcloud.cos.region.Region;
 import org.apache.commons.lang3.StringUtils;
+import org.bson.types.ObjectId;
 import org.n3r.idworker.Sid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
+import sun.misc.BASE64Decoder;
 
-import java.io.FileInputStream;
-import java.io.InputStream;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
 
 @Service
 public class UploaderServiceImpl implements IUploaderService {
@@ -35,6 +45,9 @@ public class UploaderServiceImpl implements IUploaderService {
 
     @Autowired
     private Sid sid;
+
+    @Autowired
+    private GridFSBucket gridFSBucket;
 
     final static Logger logger = LoggerFactory.getLogger(UploaderServiceImpl.class);
 
@@ -122,5 +135,70 @@ public class UploaderServiceImpl implements IUploaderService {
             return GraceJSONResult.errorCustom(ResponseStatusEnum.FILE_UPLOAD_FAILD);
         }
         return GraceJSONResult.ok(finalPath);
+    }
+
+
+    @Override
+    public GraceJSONResult uploadToGridFS(NewAdminBO newAdminBO) throws Exception {
+        // 获得图片的base64字符串
+        String file64 = newAdminBO.getImg64();
+
+        // 将base64字符串转换为byte数组
+        byte[] bytes = new BASE64Decoder().decodeBuffer(file64.trim());
+
+        // 转换为输入流
+        ByteArrayInputStream inputStream = new ByteArrayInputStream(bytes);
+
+        // 上传到gridfs中
+        ObjectId fileId = gridFSBucket.uploadFromStream(newAdminBO.getUsername() + ".png", inputStream);
+
+        // 获得文件在gridfs中的主键id
+        String fileIdStr = fileId.toString();
+        return GraceJSONResult.ok(fileIdStr);
+    }
+
+
+    @Override
+    public void readInGridFS(String faceId, HttpServletRequest request, HttpServletResponse response) throws Exception {
+        // 0. 判断参数
+        if (StringUtils.isBlank(faceId) || faceId.equalsIgnoreCase("null")) {
+            GraceException.display(ResponseStatusEnum.FILE_NOT_EXIST_ERROR);
+        }
+
+        // 1. 从gridfs中读取
+        File adminFace = readGridFSByFaceId(faceId);
+
+        // 2. 把人脸图片输出到浏览器
+        FileUtils.downloadFileByStream(response, adminFace);
+    }
+
+    private File readGridFSByFaceId(String faceId) throws Exception {
+
+        GridFSFindIterable gridFSFiles
+                = gridFSBucket.find(Filters.eq("_id", new ObjectId(faceId)));
+
+        GridFSFile gridFS = gridFSFiles.first();
+
+        if (gridFS == null) {
+            GraceException.display(ResponseStatusEnum.FILE_NOT_EXIST_ERROR);
+        }
+
+        String fileName = gridFS.getFilename();
+
+        // 获取文件流，保存文件到本地或者服务器的临时目录
+        // TODO
+        File fileTemp = new File("C:/Users/HP/Desktop/java/news/temp_face");
+        if (!fileTemp.exists()) {
+            fileTemp.mkdirs();
+        }
+
+        File myFile = new File("C:/Users/HP/Desktop/java/news/temp_face/" + fileName);
+
+        // 创建文件输出流
+        OutputStream os = new FileOutputStream(myFile);
+        // 下载到服务器或者本地
+        gridFSBucket.downloadToStream(new ObjectId(faceId), os);
+
+        return myFile;
     }
 }

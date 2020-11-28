@@ -1,5 +1,6 @@
 package com.ltz.news.service.impl;
 
+import com.ltz.news.constant.Constant;
 import com.ltz.news.pojo.bo.UpdateUserInfoBO;
 import com.ltz.news.constant.Sex;
 import com.ltz.news.constant.UserStatus;
@@ -24,7 +25,6 @@ import tk.mybatis.mapper.entity.Example;
 import java.util.Date;
 import java.util.Map;
 
-import static com.ltz.news.constant.Constant.*;
 
 
 
@@ -90,26 +90,6 @@ public class UserServiceImpl implements IUserService {
         return user;
     }
 
-    /**
-     * 根据用户主键id查询用户信息
-     *
-     * @param userId
-     */
-    @Override
-    public AppUser getUser(String userId) {
-        String userJson = redis.get(REDIS_USER_INFO + ":" + userId);
-        AppUser user = null;
-        if (StringUtils.isNotBlank(userJson)) {
-            user = JsonUtils.jsonToPojo(userJson, AppUser.class);
-        } else {
-            user = appUserMapper.selectByPrimaryKey(userId);
-            // 由于用户信息不怎么会变动，对于一些千万级别的网站来说，这类信息不会直接去查询数据库
-            // 那么完全可以依靠redis，直接把查询后的数据存入到redis中
-            redis.set(REDIS_USER_INFO + ":" + userId, JsonUtils.objectToJson(user));
-        }
-        return user;
-    }
-
 
     @Override
     public GraceJSONResult getUserInfo(String userId) {
@@ -162,7 +142,7 @@ public class UserServiceImpl implements IUserService {
         // 1. 执行更新操作
         String userId = updateUserInfoBO.getId();
         // 保证双写一致，先删除redis中的数据，后更新数据库
-        redis.del(REDIS_USER_INFO + ":" + userId);
+        redis.del(Constant.REDIS_USER_INFO + ":" + userId);
 
         AppUser userInfo = new AppUser();
         BeanUtils.copyProperties(updateUserInfoBO, userInfo);
@@ -177,15 +157,34 @@ public class UserServiceImpl implements IUserService {
 
         // 再次查询用户的最新信息，放入redis中
         AppUser user = getUser(userId);
-        redis.set(REDIS_USER_INFO + ":" + userId, JsonUtils.objectToJson(user));
+        redis.set(Constant.REDIS_USER_INFO + ":" + userId, JsonUtils.objectToJson(user));
 
         // 缓存双删策略
         try {
             Thread.sleep(100);
-            redis.del(REDIS_USER_INFO + ":" + userId);
+            redis.del(Constant.REDIS_USER_INFO + ":" + userId);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         return GraceJSONResult.ok();
+    }
+
+    /**
+     * 根据用户主键id查询用户信息
+     *
+     * @param userId
+     */
+    public AppUser getUser(String userId) {
+        String userJson = redis.get(Constant.REDIS_USER_INFO + ":" + userId);
+        AppUser user = null;
+        if (StringUtils.isNotBlank(userJson)) {
+            user = JsonUtils.jsonToPojo(userJson, AppUser.class);
+        } else {
+            user = appUserMapper.selectByPrimaryKey(userId);
+            // 由于用户信息不怎么会变动，对于一些千万级别的网站来说，这类信息不会直接去查询数据库
+            // 那么完全可以依靠redis，直接把查询后的数据存入到redis中
+            redis.set(Constant.REDIS_USER_INFO + ":" + userId, JsonUtils.objectToJson(user));
+        }
+        return user;
     }
 }

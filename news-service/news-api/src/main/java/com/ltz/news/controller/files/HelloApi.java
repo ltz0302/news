@@ -9,5 +9,5 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface HelloApi {
     @ApiOperation(value = "hello方法的接口", notes = "hello方法的接口", httpMethod = "GET")
     @GetMapping("/hello")
-    public Object hello();
+    Object hello();
 }

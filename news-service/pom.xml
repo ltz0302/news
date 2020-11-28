@@ -17,6 +17,7 @@
         <module>news-api</module>
         <module>news-model</module>
         <module>news-files</module>
+        <module>news-admin</module>
     </modules>
 
 </project>

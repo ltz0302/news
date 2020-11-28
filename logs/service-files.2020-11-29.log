@@ -1,0 +1,78 @@
+2020-11-29 00:23:37.414 [main] INFO  com.ltz.news.FilesApplication - No active profile set, falling back to default profiles: default
+2020-11-29 00:23:38.703 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-29 00:23:38.704 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-11-29 00:23:38.784 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73ms. Found 0 MongoDB repository interfaces.
+2020-11-29 00:23:38.803 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-29 00:23:38.804 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-29 00:23:38.848 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34ms. Found 0 Redis repository interfaces.
+2020-11-29 00:23:39.171 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=60fd9750-a775-33a3-8122-afc9d7bca345
+2020-11-29 00:23:39.902 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8004 (http)
+2020-11-29 00:23:39.917 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8004"]
+2020-11-29 00:23:39.917 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-29 00:23:39.918 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-11-29 00:23:40.181 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-29 00:23:40.181 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2745 ms
+2020-11-29 00:23:41.777 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-11-29 00:23:41.860 [cluster-ClusterId{value='5fc2dbfd83d531165cf01a0d', description='null'}-127.0.0.1:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:45}] to 127.0.0.1:27017
+2020-11-29 00:23:41.870 [cluster-ClusterId{value='5fc2dbfd83d531165cf01a0d', description='null'}-127.0.0.1:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=6422900}
+2020-11-29 00:23:42.725 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-11-29 00:23:42.753 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-11-29 00:23:42.753 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-29 00:23:42.761 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-11-29 00:23:42.761 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-29 00:23:42.949 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-29 00:23:45.462 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-11-29 00:23:45.706 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-11-29 00:23:45.726 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-11-29 00:23:45.778 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-11-29 00:23:45.983 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8004"]
+2020-11-29 00:23:46.017 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8004 (http) with context path ''
+2020-11-29 00:23:47.894 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-11-29 00:23:47.898 [main] INFO  com.ltz.news.FilesApplication - Started FilesApplication in 15.709 seconds (JVM running for 17.714)
+2020-11-29 00:23:56.014 [http-nio-8004-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-29 00:23:56.014 [http-nio-8004-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-29 00:23:56.023 [http-nio-8004-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2020-11-29 00:23:56.105 [http-nio-8004-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UploaderServiceImpl.readInGridFS====
+2020-11-29 00:23:56.178 [http-nio-8004-exec-2] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:46}] to 127.0.0.1:27017
+2020-11-29 00:23:56.262 [http-nio-8004-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：157
+2020-11-29 00:23:59.513 [http-nio-8004-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UploaderServiceImpl.readInGridFS====
+2020-11-29 00:24:35.863 [http-nio-8004-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UploaderServiceImpl.readInGridFS====
+2020-11-29 00:24:35.877 [http-nio-8004-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：14
+2020-11-29 00:24:41.558 [http-nio-8004-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UploaderServiceImpl.readInGridFS====
+2020-11-29 00:26:26.546 [main] INFO  com.ltz.news.FilesApplication - No active profile set, falling back to default profiles: default
+2020-11-29 00:26:27.819 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-29 00:26:27.820 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-11-29 00:26:27.908 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 81ms. Found 0 MongoDB repository interfaces.
+2020-11-29 00:26:27.930 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-29 00:26:27.933 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-29 00:26:27.981 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36ms. Found 0 Redis repository interfaces.
+2020-11-29 00:26:28.274 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=60fd9750-a775-33a3-8122-afc9d7bca345
+2020-11-29 00:26:28.984 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8004 (http)
+2020-11-29 00:26:28.999 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8004"]
+2020-11-29 00:26:28.999 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-29 00:26:28.999 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-11-29 00:26:29.268 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-29 00:26:29.268 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2697 ms
+2020-11-29 00:26:30.841 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-11-29 00:26:30.922 [cluster-ClusterId{value='5fc2dca642670f4479f97db5', description='null'}-127.0.0.1:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:47}] to 127.0.0.1:27017
+2020-11-29 00:26:30.932 [cluster-ClusterId{value='5fc2dca642670f4479f97db5', description='null'}-127.0.0.1:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=6025600}
+2020-11-29 00:26:31.817 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-11-29 00:26:31.845 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-11-29 00:26:31.845 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-29 00:26:31.853 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-11-29 00:26:31.853 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-29 00:26:32.047 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-29 00:26:35.125 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-11-29 00:26:35.380 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-11-29 00:26:35.404 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-11-29 00:26:35.479 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-11-29 00:26:35.771 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8004"]
+2020-11-29 00:26:35.824 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8004 (http) with context path ''
+2020-11-29 00:26:37.944 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-11-29 00:26:37.951 [main] INFO  com.ltz.news.FilesApplication - Started FilesApplication in 16.538 seconds (JVM running for 18.452)
+2020-11-29 00:27:00.312 [http-nio-8004-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-29 00:27:00.312 [http-nio-8004-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-29 00:27:00.323 [http-nio-8004-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2020-11-29 00:27:00.398 [http-nio-8004-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UploaderServiceImpl.readInGridFS====
+2020-11-29 00:27:00.444 [http-nio-8004-exec-2] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:48}] to 127.0.0.1:27017
+2020-11-29 00:27:00.498 [http-nio-8004-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：100
