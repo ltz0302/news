@@ -13,5 +13,5 @@ import org.springframework.stereotype.Component;
 public class TengxunyunResource {
     private String secretId;
     private String secretKey;
-
+    private String region;
 }

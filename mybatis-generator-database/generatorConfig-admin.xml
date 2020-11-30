@@ -30,6 +30,7 @@
 
         <!-- 数据库表 -->
         <table tableName="admin_user"></table>
+        <table tableName="category"></table>
 
     </context>
 </generatorConfiguration>

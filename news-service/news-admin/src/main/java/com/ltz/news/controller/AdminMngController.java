@@ -48,4 +48,9 @@ public class AdminMngController implements AdminMngControllerApi {
     public GraceJSONResult adminLogout(String adminId, HttpServletRequest request, HttpServletResponse response) {
         return adminUserService.adminLogout(adminId,request,response);
     }
+
+    @Override
+    public GraceJSONResult adminFaceLogin(AdminLoginBO adminLoginBO, HttpServletRequest request, HttpServletResponse response) {
+        return adminUserService.adminFaceLogin(adminLoginBO,request,response);
+    }
 }

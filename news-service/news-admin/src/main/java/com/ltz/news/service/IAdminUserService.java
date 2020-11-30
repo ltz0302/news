@@ -22,6 +22,8 @@ public interface IAdminUserService {
     GraceJSONResult getAdminList(Integer page, Integer pageSize);
 
     GraceJSONResult adminLogout(String adminId,HttpServletRequest request,HttpServletResponse response);
+
+    GraceJSONResult adminFaceLogin(AdminLoginBO adminLoginBO, HttpServletRequest request, HttpServletResponse response);
 //
 //    /**
 //     * 新增管理员

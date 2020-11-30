@@ -2,7 +2,6 @@ package com.ltz.news.utils;
 
 import com.ltz.news.constant.Constant;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 
@@ -78,4 +77,5 @@ public class ControllerUtils {
         }
 
     }
+
 }

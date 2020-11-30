@@ -18,6 +18,7 @@ public interface IUserService {
      */
     AppUser createUser(String mobile);
 
+    AppUser getUser(String userId);
 
     GraceJSONResult getUserInfo(String userId);
 

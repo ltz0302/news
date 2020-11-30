@@ -54,4 +54,18 @@ public class FileUploaderController implements FileUploaderControllerApi {
     public void readInGridFS(String faceId, HttpServletRequest request, HttpServletResponse response) throws Exception {
         uploaderService.readInGridFS(faceId,request,response);
     }
+
+    /**
+     * 从gridfs中读取图片内容，并且返回base64
+     *
+     * @param faceId
+     * @param request
+     * @param response
+     * @return
+     * @throws Exception
+     */
+    @Override
+    public GraceJSONResult readFace64InGridFS(String faceId, HttpServletRequest request, HttpServletResponse response) throws Exception {
+        return uploaderService.readFace64InGridFS(faceId,request,response);
+    }
 }

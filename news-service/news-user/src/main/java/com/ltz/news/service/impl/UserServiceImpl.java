@@ -174,6 +174,7 @@ public class UserServiceImpl implements IUserService {
      *
      * @param userId
      */
+    @Override
     public AppUser getUser(String userId) {
         String userJson = redis.get(Constant.REDIS_USER_INFO + ":" + userId);
         AppUser user = null;

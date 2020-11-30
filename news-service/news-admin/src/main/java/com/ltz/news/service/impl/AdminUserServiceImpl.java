@@ -3,6 +3,7 @@ package com.ltz.news.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.ltz.news.constant.Constant;
+import com.ltz.news.constant.FaceVerifyType;
 import com.ltz.news.exception.GraceException;
 import com.ltz.news.mapper.AdminUserMapper;
 import com.ltz.news.pojo.AdminUser;
@@ -12,14 +13,17 @@ import com.ltz.news.result.GraceJSONResult;
 import com.ltz.news.result.ResponseStatusEnum;
 import com.ltz.news.service.IAdminUserService;
 import com.ltz.news.utils.ControllerUtils;
+import com.ltz.news.utils.FaceVerifyUtils;
 import com.ltz.news.utils.PagedGridResult;
 import com.ltz.news.utils.RedisOperator;
 import org.apache.commons.lang3.StringUtils;
 import org.n3r.idworker.Sid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.client.RestTemplate;
 import tk.mybatis.mapper.entity.Example;
 
 import javax.servlet.http.HttpServletRequest;
@@ -44,6 +48,12 @@ public class AdminUserServiceImpl implements IAdminUserService {
 
     @Autowired
     private Sid sid;
+
+    @Autowired
+    private RestTemplate restTemplate;
+
+    @Autowired
+    private FaceVerifyUtils faceVerifyUtils;
 
     @Override
     public GraceJSONResult adminLogin(AdminLoginBO adminLoginBO, HttpServletRequest request, HttpServletResponse response) {
@@ -221,8 +231,8 @@ public class AdminUserServiceImpl implements IAdminUserService {
             PagedGridResult gridResult = new PagedGridResult();
             gridResult.setRows(adminUserList);
             gridResult.setPage(page);
-            gridResult.setRecords(pageList.getPages());
-            gridResult.setTotal(pageList.getTotal());
+            gridResult.setRecords(pageList.getTotal());
+            gridResult.setTotal(pageList.getPages());
             return gridResult;
         }
 
@@ -236,6 +246,52 @@ public class AdminUserServiceImpl implements IAdminUserService {
         ControllerUtils.deleteCookie(request, response, "atoken");
         ControllerUtils.deleteCookie(request, response, "aid");
         ControllerUtils.deleteCookie(request, response, "aname");
+
+        return GraceJSONResult.ok();
+    }
+
+
+    @Override
+    public GraceJSONResult adminFaceLogin(AdminLoginBO adminLoginBO, HttpServletRequest request, HttpServletResponse response) {
+        // 0. 判断用户名和人脸信息不能为空
+        if (StringUtils.isBlank(adminLoginBO.getUsername())) {
+            return GraceJSONResult.errorCustom(ResponseStatusEnum.ADMIN_USERNAME_NULL_ERROR);
+        }
+        String tempFace64 = adminLoginBO.getImg64();
+        if (StringUtils.isBlank(tempFace64)) {
+            return GraceJSONResult.errorCustom(ResponseStatusEnum.ADMIN_FACE_NULL_ERROR);
+        }
+
+        // 1. 从数据库中查询出faceId
+        AdminUser admin = queryAdminByUsername(adminLoginBO.getUsername());
+        String adminFaceId = admin.getFaceId();
+
+        if (StringUtils.isBlank(adminFaceId)) {
+            return GraceJSONResult.errorCustom(ResponseStatusEnum.ADMIN_FACE_LOGIN_ERROR);
+        }
+
+        // 2. 请求文件服务，获得人脸数据的base64数据
+        // TODO
+        String fileServerUrlExecute
+                = "http://files.imoocnews.com:8004/fs/readFace64InGridFS?faceId=" + adminFaceId;
+        ResponseEntity<GraceJSONResult> responseEntity
+                = restTemplate.getForEntity(fileServerUrlExecute, GraceJSONResult.class);
+        GraceJSONResult bodyResult = responseEntity.getBody();
+        String base64DB = (String)bodyResult.getData();
+
+
+        // 3. 调用阿里ai进行人脸对比识别，判断可信度，从而实现人脸登录
+        boolean result = faceVerifyUtils.faceVerify(FaceVerifyType.BASE64.type,
+                tempFace64,
+                base64DB,
+                60);
+
+        if (!result) {
+            return GraceJSONResult.errorCustom(ResponseStatusEnum.ADMIN_FACE_LOGIN_ERROR);
+        }
+
+        // 4. admin登录后的数据设置，redis与cookie
+        doLoginSettings(admin, request, response);
 
         return GraceJSONResult.ok();
     }
