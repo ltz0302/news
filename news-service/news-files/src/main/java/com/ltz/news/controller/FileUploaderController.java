@@ -29,6 +29,21 @@ public class FileUploaderController implements FileUploaderControllerApi {
         return uploaderService.uploadFace(userId,file);
     }
 
+
+    /**
+     * 上传多个文件
+     *
+     * @param userId
+     * @param files
+     * @return
+     * @throws Exception
+     */
+    @Override
+    public GraceJSONResult uploadSomeFiles(String userId, MultipartFile[] files) throws Exception {
+        return uploaderService.uploadSomeFiles(userId,files);
+    }
+
+
     /**
      * 文件上传到mongodb的gridfs中
      *

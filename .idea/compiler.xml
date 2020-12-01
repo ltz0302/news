@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="news-files" />
         <module name="mybatis-generator-database" />
+        <module name="news-article" />
         <module name="news-admin" />
         <module name="news-api" />
         <module name="news-common" />
@@ -24,6 +25,7 @@
       <module name="mybatis-generator" options="" />
       <module name="news-admin" options="-parameters" />
       <module name="news-api" options="-parameters" />
+      <module name="news-article" options="-parameters" />
       <module name="news-common" options="-parameters" />
       <module name="news-files" options="-parameters" />
       <module name="news-model" options="-parameters" />

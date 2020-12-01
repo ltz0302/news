@@ -18,6 +18,7 @@
         <module>news-model</module>
         <module>news-files</module>
         <module>news-admin</module>
+        <module>news-article</module>
     </modules>
 
 </project>

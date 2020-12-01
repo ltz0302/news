@@ -33,6 +33,8 @@ import sun.misc.BASE64Decoder;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class UploaderServiceImpl implements IUploaderService {
@@ -138,6 +140,56 @@ public class UploaderServiceImpl implements IUploaderService {
         return GraceJSONResult.ok(finalPath);
     }
 
+
+    @Override
+    public GraceJSONResult uploadSomeFiles(String userId, MultipartFile[] files) throws Exception {
+        // 声明list，用于存放多个图片的地址路径，返回到前端
+        List<String> imageUrlList = new ArrayList<>();
+        if (files != null && files.length > 0) {
+            for (MultipartFile file : files) {
+                String path = "";
+                if (file != null) {
+                    // 获得文件上传的名称
+                    String fileName = file.getOriginalFilename();
+
+                    // 判断文件名不能为空
+                    if (StringUtils.isNotBlank(fileName)) {
+                        String fileNameArr[] = fileName.split("\\.");
+                        // 获得后缀
+                        String suffix = fileNameArr[fileNameArr.length - 1];
+                        // 判断后缀符合我们的预定义规范
+                        if (!suffix.equalsIgnoreCase("png") &&
+                                !suffix.equalsIgnoreCase("jpg") &&
+                                !suffix.equalsIgnoreCase("jpeg")
+                        ) {
+                            continue;
+                        }
+
+                        // 执行上传
+//                        path = uploaderService.uploadFdfs(file, suffix);
+                        path = uploadCOS(file, userId, suffix);
+
+                    } else {
+                        continue;
+                    }
+                } else {
+                    continue;
+                }
+
+                String finalPath = "";
+                if (StringUtils.isNotBlank(path)) {
+//                    finalPath = fileResource.getHost() + path;
+                    finalPath = fileResource.getCosHost() + path;
+                    // FIXME: 放入到imagelist之前，需要对图片做一次审核
+                    imageUrlList.add(finalPath);
+                } else {
+                    continue;
+                }
+            }
+        }
+
+        return GraceJSONResult.ok(imageUrlList);
+    }
 
     @Override
     public GraceJSONResult uploadToGridFS(NewAdminBO newAdminBO) throws Exception {

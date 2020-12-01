@@ -18,6 +18,8 @@ public interface IUploaderService {
     GraceJSONResult uploadFace(String userId,
                                MultipartFile file) throws Exception;
 
+    GraceJSONResult uploadSomeFiles(String userId, MultipartFile[] files) throws Exception;
+
     GraceJSONResult uploadToGridFS(NewAdminBO newAdminBO) throws Exception;
 
     void readInGridFS(String faceId, HttpServletRequest request, HttpServletResponse response) throws Exception;

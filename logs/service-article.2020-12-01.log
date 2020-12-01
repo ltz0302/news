@@ -1,0 +1,98 @@
+2020-12-01 00:29:13.560 [main] INFO  com.ltz.news.ArticleApplication - No active profile set, falling back to default profiles: default
+2020-12-01 00:29:15.746 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-01 00:29:15.748 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-12-01 00:29:15.871 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 111ms. Found 0 MongoDB repository interfaces.
+2020-12-01 00:29:15.906 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-01 00:29:15.908 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-01 00:29:16.004 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73ms. Found 0 Redis repository interfaces.
+2020-12-01 00:29:16.436 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.ltz.news]' package. Please check your configuration.
+2020-12-01 00:29:16.628 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=b777ce86-cb3a-3746-b13a-47c2dea97423
+2020-12-01 00:29:17.784 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2020-12-01 00:29:17.806 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
+2020-12-01 00:29:17.807 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-01 00:29:17.807 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-12-01 00:29:18.191 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-12-01 00:29:18.191 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4583 ms
+2020-12-01 00:29:25.755 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-12-01 00:29:25.883 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-12-01 00:29:25.883 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-12-01 00:29:25.897 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-12-01 00:29:25.897 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-12-01 00:29:26.175 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-01 00:29:26.391 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-12-01 00:29:26.392 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-12-01 00:29:26.393 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-12-01 00:29:26.393 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2020-12-01 00:29:27.004 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-12-01 00:29:29.110 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-12-01 00:29:29.276 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-12-01 00:29:29.307 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-12-01 00:29:29.395 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-12-01 00:29:29.690 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8001"]
+2020-12-01 00:29:29.728 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2020-12-01 00:29:30.019 [scheduling-1] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.ArticleServiceImpl.updateAppointToPublish====
+2020-12-01 00:29:30.025 [scheduling-1] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：5
+2020-12-01 00:29:31.779 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-12-01 00:29:31.783 [main] INFO  com.ltz.news.ArticleApplication - Started ArticleApplication in 25.2 seconds (JVM running for 30.039)
+2020-12-01 00:29:33.001 [scheduling-1] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.ArticleServiceImpl.updateAppointToPublish====
+2020-12-01 00:29:33.001 [scheduling-1] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：0
+2020-12-01 00:29:36.001 [scheduling-1] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.ArticleServiceImpl.updateAppointToPublish====
+2020-12-01 00:29:36.002 [scheduling-1] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：0
+2020-12-01 00:29:39.001 [scheduling-1] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.ArticleServiceImpl.updateAppointToPublish====
+2020-12-01 00:29:39.001 [scheduling-1] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：0
+2020-12-01 00:29:42.002 [scheduling-1] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.ArticleServiceImpl.updateAppointToPublish====
+2020-12-01 00:29:42.002 [scheduling-1] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：0
+2020-12-01 22:31:47.043 [main] INFO  com.ltz.news.ArticleApplication - No active profile set, falling back to default profiles: default
+2020-12-01 22:31:48.897 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-01 22:31:48.898 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-12-01 22:31:49.030 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 124ms. Found 0 MongoDB repository interfaces.
+2020-12-01 22:31:49.055 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-01 22:31:49.058 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-01 22:31:49.141 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66ms. Found 0 Redis repository interfaces.
+2020-12-01 22:31:49.514 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.ltz.news]' package. Please check your configuration.
+2020-12-01 22:31:49.687 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=0c736da5-9fa0-30d2-aec8-325a92563217
+2020-12-01 22:31:50.695 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2020-12-01 22:31:50.713 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
+2020-12-01 22:31:50.713 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-01 22:31:50.714 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-12-01 22:31:51.015 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-12-01 22:31:51.015 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3932 ms
+2020-12-01 22:31:54.954 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-12-01 22:31:55.070 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-12-01 22:31:55.070 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-12-01 22:31:55.081 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-12-01 22:31:55.081 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-12-01 22:31:55.346 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-01 22:31:55.576 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-12-01 22:31:55.578 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-12-01 22:31:55.579 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-12-01 22:31:55.579 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2020-12-01 22:31:59.104 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-12-01 22:31:59.253 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-12-01 22:31:59.275 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-12-01 22:31:59.338 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-12-01 22:31:59.622 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8001"]
+2020-12-01 22:31:59.661 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2020-12-01 22:32:01.837 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-12-01 22:32:01.840 [main] INFO  com.ltz.news.ArticleApplication - Started ArticleApplication in 23.637 seconds (JVM running for 27.577)
+2020-12-01 22:35:54.018 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-01 22:35:54.019 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-12-01 22:35:54.031 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2020-12-01 22:39:10.576 [http-nio-8001-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.ArticleServiceImpl.queryAllArticleListAdmin====
+2020-12-01 22:39:10.865 [http-nio-8001-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Starting...
+2020-12-01 22:39:11.058 [http-nio-8001-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Start completed.
+2020-12-01 22:39:11.127 [http-nio-8001-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：551
+2020-12-01 22:39:59.643 [http-nio-8001-exec-8] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.ArticleServiceImpl.queryAllArticleListAdmin====
+2020-12-01 22:39:59.667 [http-nio-8001-exec-8] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：24
+2020-12-01 22:40:00.762 [http-nio-8001-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.ArticleServiceImpl.queryAllArticleListAdmin====
+2020-12-01 22:40:00.770 [http-nio-8001-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：8
+2020-12-01 22:40:01.903 [http-nio-8001-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.ArticleServiceImpl.queryAllArticleListAdmin====
+2020-12-01 22:40:01.909 [http-nio-8001-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：6
+2020-12-01 22:40:03.068 [http-nio-8001-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.ArticleServiceImpl.queryAllArticleListAdmin====
+2020-12-01 22:40:03.079 [http-nio-8001-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：10
+2020-12-01 22:40:08.376 [http-nio-8001-exec-8] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.ArticleServiceImpl.queryAllArticleListAdmin====
+2020-12-01 22:40:08.387 [http-nio-8001-exec-8] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：10
+2020-12-01 22:40:40.283 [http-nio-8001-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.ArticleServiceImpl.queryAllArticleListAdmin====
+2020-12-01 22:40:40.289 [http-nio-8001-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：6
+2020-12-01 22:40:42.568 [http-nio-8001-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.ArticleServiceImpl.queryAllArticleListAdmin====
+2020-12-01 22:40:42.571 [http-nio-8001-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
