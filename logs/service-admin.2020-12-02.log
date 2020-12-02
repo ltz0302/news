@@ -1,0 +1,12 @@
+2020-12-02 00:16:29.253 [http-nio-8005-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.FriendLinkServiceImpl.queryPortalAllFriendLinkList====
+2020-12-02 00:16:29.250 [http-nio-8005-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.CategoryServiceImpl.getCats====
+2020-12-02 00:16:29.272 [http-nio-8005-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：4
+2020-12-02 00:16:29.276 [http-nio-8005-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：7
+2020-12-02 00:25:26.347 [http-nio-8005-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.CategoryServiceImpl.getCats====
+2020-12-02 00:25:26.349 [http-nio-8005-exec-9] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.FriendLinkServiceImpl.queryPortalAllFriendLinkList====
+2020-12-02 00:25:26.354 [http-nio-8005-exec-9] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：4
+2020-12-02 00:25:26.355 [http-nio-8005-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：7
+2020-12-02 00:26:20.833 [http-nio-8005-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.CategoryServiceImpl.getCats====
+2020-12-02 00:26:20.833 [http-nio-8005-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.FriendLinkServiceImpl.queryPortalAllFriendLinkList====
+2020-12-02 00:26:20.837 [http-nio-8005-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
+2020-12-02 00:26:20.837 [http-nio-8005-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3

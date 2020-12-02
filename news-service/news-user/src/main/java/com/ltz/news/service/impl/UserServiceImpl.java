@@ -106,12 +106,19 @@ public class UserServiceImpl implements IUserService {
         BeanUtils.copyProperties(user, userVO);
 
         // 3. 查询redis中用户的关注数和粉丝数，放入userVO到前端渲染
-//        userVO.setMyFansCounts(getCountsFromRedis(REDIS_WRITER_FANS_COUNTS + ":" + userId));
-//        userVO.setMyFollowCounts(getCountsFromRedis(REDIS_MY_FOLLOW_COUNTS + ":" + userId));
+        userVO.setMyFansCounts(getCountsFromRedis(Constant.REDIS_WRITER_FANS_COUNTS + ":" + userId));
+        userVO.setMyFollowCounts(getCountsFromRedis(Constant.REDIS_MY_FOLLOW_COUNTS + ":" + userId));
 
         return GraceJSONResult.ok(userVO);
     }
 
+    private Integer getCountsFromRedis(String key) {
+        String countsStr = redis.get(key);
+        if (StringUtils.isBlank(countsStr)) {
+            countsStr = "0";
+        }
+        return Integer.valueOf(countsStr);
+    }
 
     @Override
     public GraceJSONResult getAccountInfo(String userId) {

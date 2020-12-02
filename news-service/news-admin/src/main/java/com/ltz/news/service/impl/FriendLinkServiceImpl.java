@@ -1,5 +1,6 @@
 package com.ltz.news.service.impl;
 
+import com.ltz.news.constant.YesOrNo;
 import com.ltz.news.pojo.bo.SaveFriendLinkBO;
 import com.ltz.news.pojo.mo.FriendLinkMO;
 import com.ltz.news.repository.FriendLinkRepository;
@@ -65,5 +66,11 @@ public class FriendLinkServiceImpl implements IFriendLinkService {
     }
 
 
-
+    /**
+     * 首页查询友情链接
+     */
+    @Override
+    public List<FriendLinkMO> queryPortalAllFriendLinkList() {
+        return friendLinkRepository.getAllByIsDelete(YesOrNo.NO.type);
+    }
 }

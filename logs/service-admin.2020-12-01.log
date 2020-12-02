@@ -245,3 +245,68 @@ java.lang.NullPointerException: null
 2020-12-01 23:16:04.945 [http-nio-8005-exec-9] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：4
 2020-12-01 23:21:51.306 [http-nio-8005-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.CategoryServiceImpl.getCats====
 2020-12-01 23:21:51.309 [http-nio-8005-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
+2020-12-01 23:41:02.524 [main] INFO  com.ltz.news.AdminApplication - No active profile set, falling back to default profiles: default
+2020-12-01 23:41:04.795 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-01 23:41:04.796 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-12-01 23:41:05.039 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 233ms. Found 1 MongoDB repository interfaces.
+2020-12-01 23:41:05.066 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-01 23:41:05.068 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-01 23:41:05.158 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ltz.news.repository.FriendLinkRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-12-01 23:41:05.158 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66ms. Found 0 Redis repository interfaces.
+2020-12-01 23:41:05.609 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.ltz.news]' package. Please check your configuration.
+2020-12-01 23:41:05.816 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=2e9c2861-ba3c-338a-8c64-50d1f4b507e9
+2020-12-01 23:41:07.154 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8005 (http)
+2020-12-01 23:41:07.178 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8005"]
+2020-12-01 23:41:07.179 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-01 23:41:07.180 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-12-01 23:41:07.633 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-12-01 23:41:07.633 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5076 ms
+2020-12-01 23:41:10.960 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-12-01 23:41:11.070 [cluster-ClusterId{value='5fc6c6868f929f1e7fb291bd', description='null'}-127.0.0.1:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:78}] to 127.0.0.1:27017
+2020-12-01 23:41:11.080 [cluster-ClusterId{value='5fc6c6868f929f1e7fb291bd', description='null'}-127.0.0.1:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5137000}
+2020-12-01 23:41:12.224 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-12-01 23:41:12.265 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-12-01 23:41:12.265 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-12-01 23:41:12.273 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-12-01 23:41:12.274 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-12-01 23:41:12.501 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-01 23:41:12.681 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-12-01 23:41:12.683 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-12-01 23:41:12.685 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-12-01 23:41:12.685 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2020-12-01 23:41:15.061 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-12-01 23:41:15.210 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-12-01 23:41:15.238 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-12-01 23:41:15.316 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-12-01 23:41:15.764 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8005"]
+2020-12-01 23:41:15.801 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8005 (http) with context path ''
+2020-12-01 23:41:17.698 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-12-01 23:41:17.699 [main] INFO  com.ltz.news.AdminApplication - Started AdminApplication in 23.139 seconds (JVM running for 26.039)
+2020-12-01 23:41:53.101 [http-nio-8005-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-01 23:41:53.102 [http-nio-8005-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-12-01 23:41:53.112 [http-nio-8005-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2020-12-01 23:41:53.167 [http-nio-8005-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.FriendLinkServiceImpl.queryPortalAllFriendLinkList====
+2020-12-01 23:41:53.167 [http-nio-8005-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.CategoryServiceImpl.getCats====
+2020-12-01 23:41:53.275 [http-nio-8005-exec-1] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:79}] to 127.0.0.1:27017
+2020-12-01 23:41:53.327 [http-nio-8005-exec-3] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2020-12-01 23:41:53.331 [http-nio-8005-exec-3] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2020-12-01 23:41:53.364 [http-nio-8005-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：197
+2020-12-01 23:41:54.842 [http-nio-8005-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：1675
+2020-12-01 23:42:02.741 [http-nio-8005-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.FriendLinkServiceImpl.queryAllFriendLinkList====
+2020-12-01 23:42:02.745 [http-nio-8005-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：4
+2020-12-01 23:54:06.199 [http-nio-8005-exec-9] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.CategoryServiceImpl.getCats====
+2020-12-01 23:54:06.201 [http-nio-8005-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.FriendLinkServiceImpl.queryPortalAllFriendLinkList====
+2020-12-01 23:54:06.205 [http-nio-8005-exec-9] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：6
+2020-12-01 23:54:06.205 [http-nio-8005-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
+2020-12-01 23:54:22.895 [http-nio-8005-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.CategoryServiceImpl.getCats====
+2020-12-01 23:54:22.898 [http-nio-8005-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
+2020-12-01 23:54:22.900 [http-nio-8005-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.FriendLinkServiceImpl.queryPortalAllFriendLinkList====
+2020-12-01 23:54:22.904 [http-nio-8005-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
+2020-12-01 23:54:56.269 [http-nio-8005-exec-7] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.CategoryServiceImpl.getCats====
+2020-12-01 23:54:56.270 [http-nio-8005-exec-8] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.FriendLinkServiceImpl.queryPortalAllFriendLinkList====
+2020-12-01 23:54:56.273 [http-nio-8005-exec-7] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：4
+2020-12-01 23:54:56.273 [http-nio-8005-exec-8] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
+2020-12-01 23:55:07.002 [http-nio-8005-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.CategoryServiceImpl.getCats====
+2020-12-01 23:55:07.005 [http-nio-8005-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
+2020-12-01 23:55:07.008 [http-nio-8005-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.FriendLinkServiceImpl.queryPortalAllFriendLinkList====
+2020-12-01 23:55:07.011 [http-nio-8005-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2

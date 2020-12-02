@@ -70,3 +70,13 @@
 2020-12-01 22:58:02.646 [http-nio-8004-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UploaderServiceImpl.uploadSomeFiles====
 2020-12-01 22:58:02.824 [http-nio-8004-exec-4] WARN  com.qcloud.cos.COSClient - No content length specified for stream data.  Stream contents will be buffered in memory and could result in out of memory errors.
 2020-12-01 22:58:04.101 [http-nio-8004-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：1455
+2020-12-01 23:15:16.580 [http-nio-8004-exec-7] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UploaderServiceImpl.uploadSomeFiles====
+2020-12-01 23:15:16.586 [http-nio-8004-exec-7] WARN  com.qcloud.cos.COSClient - No content length specified for stream data.  Stream contents will be buffered in memory and could result in out of memory errors.
+2020-12-01 23:15:19.055 [http-nio-8004-exec-7] WARN  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2474
+2020-12-01 23:15:52.959 [http-nio-8004-exec-9] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UploaderServiceImpl.uploadSomeFiles====
+2020-12-01 23:15:52.967 [http-nio-8004-exec-9] WARN  com.qcloud.cos.COSClient - No content length specified for stream data.  Stream contents will be buffered in memory and could result in out of memory errors.
+2020-12-01 23:15:53.820 [http-nio-8004-exec-9] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：860
+2020-12-01 23:22:01.806 [http-nio-8004-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UploaderServiceImpl.uploadSomeFiles====
+2020-12-01 23:22:01.812 [http-nio-8004-exec-4] WARN  com.qcloud.cos.COSClient - No content length specified for stream data.  Stream contents will be buffered in memory and could result in out of memory errors.
+2020-12-01 23:22:04.071 [http-nio-8004-exec-4] WARN  com.qcloud.cos.COSClient - No content length specified for stream data.  Stream contents will be buffered in memory and could result in out of memory errors.
+2020-12-01 23:22:05.039 [http-nio-8004-exec-4] ERROR com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3233
