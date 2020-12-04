@@ -10,6 +10,7 @@ import com.ltz.news.pojo.vo.ArticleDetailVO;
 import com.ltz.news.service.IArticlePortalService;
 import com.ltz.news.utils.PagedGridResult;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
@@ -133,7 +134,20 @@ public class ArticlePortalServiceImpl implements IArticlePortalService {
      */
     @Override
     public ArticleDetailVO queryDetail(String articleId) {
-        return null;
+        Article article = new Article();
+        article.setId(articleId);
+        article.setIsAppoint(YesOrNo.NO.type);
+        article.setIsDelete(YesOrNo.NO.type);
+        article.setArticleStatus(ArticleReviewStatus.SUCCESS.type);
+
+        Article result = articleMapper.selectOne(article);
+
+        ArticleDetailVO detailVO = new ArticleDetailVO();
+        BeanUtils.copyProperties(result, detailVO);
+
+        detailVO.setCover(result.getArticleCover());
+
+        return detailVO;
     }
 
 

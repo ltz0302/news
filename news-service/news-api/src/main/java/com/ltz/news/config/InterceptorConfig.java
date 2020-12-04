@@ -1,10 +1,7 @@
 package com.ltz.news.config;
 
 
-import com.ltz.news.interceptors.AdminTokenInterceptor;
-import com.ltz.news.interceptors.PassportInterceptor;
-import com.ltz.news.interceptors.UserActiveInterceptor;
-import com.ltz.news.interceptors.UserTokenInterceptor;
+import com.ltz.news.interceptors.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -29,6 +26,11 @@ public class InterceptorConfig implements WebMvcConfigurer {
     @Bean
     public AdminTokenInterceptor adminTokenInterceptor() {
         return new AdminTokenInterceptor();
+    }
+
+    @Bean
+    public ArticleReadInterceptor articleReadInterceptor() {
+        return new ArticleReadInterceptor();
     }
 
     @Override
@@ -62,8 +64,8 @@ public class InterceptorConfig implements WebMvcConfigurer {
                 .addPathPatterns("/categoryMng/saveOrUpdateCategory")
                 .addPathPatterns("/categoryMng/getCatList");
 
-//        registry.addInterceptor(articleReadInterceptor())
-//                .addPathPatterns("/portal/article/readArticle");
+        registry.addInterceptor(articleReadInterceptor())
+                .addPathPatterns("/portal/article/readArticle");
     }
 
 }

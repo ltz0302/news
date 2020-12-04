@@ -5,9 +5,11 @@ import com.ltz.news.controller.article.ArticlePortalControllerApi;
 import com.ltz.news.controller.user.UserControllerApi;
 import com.ltz.news.pojo.Article;
 import com.ltz.news.pojo.vo.AppUserVO;
+import com.ltz.news.pojo.vo.ArticleDetailVO;
 import com.ltz.news.pojo.vo.IndexArticleVO;
 import com.ltz.news.result.GraceJSONResult;
 import com.ltz.news.service.IArticlePortalService;
+import com.ltz.news.utils.IPUtil;
 import com.ltz.news.utils.JsonUtils;
 import com.ltz.news.utils.PagedGridResult;
 import com.ltz.news.utils.RedisOperator;
@@ -76,37 +78,11 @@ public class ArticlePortalController implements ArticlePortalControllerApi {
         List<String> readCountsRedisList = redis.mget(idList);
 
         // 2. 发起远程调用（restTemplate），请求用户服务获得用户（idSet 发布者）的列表
-        String userServerUrlExecute
-                = "http://user.imoocnews.com:8003/user/queryByIds?userIds=" + JsonUtils.objectToJson(idSet);
-        ResponseEntity<GraceJSONResult> responseEntity
-                = restTemplate.getForEntity(userServerUrlExecute, GraceJSONResult.class);
-        GraceJSONResult bodyResult = responseEntity.getBody();
-        List<AppUserVO> publisherList = null;
-        if (bodyResult.getStatus() == 200) {
-            String userJson = JsonUtils.objectToJson(bodyResult.getData());
-            publisherList = JsonUtils.jsonToList(userJson, AppUserVO.class);
-        }
-//        List<AppUserVO> publisherList = getPublisherList(idSet);
-//        for (AppUserVO u : publisherList) {
-//            System.out.println(u.toString());
-//        }
+        List<AppUserVO> publisherList = getPublisherList(idSet);
+//
 
         // 3. 拼接两个list，重组文章列表
         List<IndexArticleVO> indexArticleList = new ArrayList<>();
-        for (Article a : list) {
-            IndexArticleVO indexArticleVO = new IndexArticleVO();
-            BeanUtils.copyProperties(a, indexArticleVO);
-
-            // 3.1 从publisherList中获得发布者的基本信息
-            AppUserVO publisher  = getUserIfPublisher(a.getPublishUserId(), publisherList);
-            indexArticleVO.setPublisherVO(publisher);
-
-//            // 3.2 重新组装设置文章列表中的阅读量
-//            int readCounts = getCountsFromRedis(REDIS_ARTICLE_READ_COUNTS + ":" + a.getId());
-//            indexArticleVO.setReadCounts(readCounts);
-
-            indexArticleList.add(indexArticleVO);
-        }
         for (int i = 0 ; i < list.size() ; i ++) {
             IndexArticleVO indexArticleVO = new IndexArticleVO();
             Article a = list.get(i);
@@ -149,42 +125,42 @@ public class ArticlePortalController implements ArticlePortalControllerApi {
     @Autowired
     private DiscoveryClient discoveryClient;
 
-    @Autowired
+//    @Autowired
 //    private UserControllerApi userControllerApi;
 
     // 发起远程调用，获得用户的基本信息
-//    private List<AppUserVO> getPublisherList(Set idSet) {
-//
-////        String serviceId = "SERVICE-USER";
-////        List<ServiceInstance> instanceList = discoveryClient.getInstances(serviceId);
-////        ServiceInstance userService = instanceList.get(0);
-//
-////        String userServerUrlExecute
-////                = "http://" + serviceId + "/user/queryByIds?userIds=" + JsonUtils.objectToJson(idSet);
-//
+    private List<AppUserVO> getPublisherList(Set idSet) {
+
+//        String serviceId = "SERVICE-USER";
+//        List<ServiceInstance> instanceList = discoveryClient.getInstances(serviceId);
+//        ServiceInstance userService = instanceList.get(0);
+
+//        String userServerUrlExecute
+//                = "http://" + serviceId + "/user/queryByIds?userIds=" + JsonUtils.objectToJson(idSet);
+
 //        GraceJSONResult bodyResult = userControllerApi.queryByIds(JsonUtils.objectToJson(idSet));
-//
-////        String userServerUrlExecute
-////                = "http://" + userService.getHost() +
-////                ":"
-////                + userService.getPort()
-////                + "/user/queryByIds?userIds=" + JsonUtils.objectToJson(idSet);
-//
-////        String userServerUrlExecute
-////                = "http://user.imoocnews.com:8003/user/queryByIds?userIds=" + JsonUtils.objectToJson(idSet);
-//
-////        ResponseEntity<GraceJSONResult> responseEntity
-////                = restTemplate.getForEntity(userServerUrlExecute, GraceJSONResult.class);
-////        GraceJSONResult bodyResult = responseEntity.getBody();
-//        List<AppUserVO> publisherList = null;
-//        if (bodyResult.getStatus() == 200) {
-//            String userJson = JsonUtils.objectToJson(bodyResult.getData());
-//            publisherList = JsonUtils.jsonToList(userJson, AppUserVO.class);
-//        } else {
-//            publisherList = new ArrayList<>();
-//        }
-//        return publisherList;
-//    }
+
+//        String userServerUrlExecute
+//                = "http://" + userService.getHost() +
+//                ":"
+//                + userService.getPort()
+//                + "/user/queryByIds?userIds=" + JsonUtils.objectToJson(idSet);
+
+        String userServerUrlExecute
+                = "http://user.imoocnews.com:8003/user/queryByIds?userIds=" + JsonUtils.objectToJson(idSet);
+
+        ResponseEntity<GraceJSONResult> responseEntity
+                = restTemplate.getForEntity(userServerUrlExecute, GraceJSONResult.class);
+        GraceJSONResult bodyResult = responseEntity.getBody();
+        List<AppUserVO> publisherList = null;
+        if (bodyResult.getStatus() == 200) {
+            String userJson = JsonUtils.objectToJson(bodyResult.getData());
+            publisherList = JsonUtils.jsonToList(userJson, AppUserVO.class);
+        } else {
+            publisherList = new ArrayList<>();
+        }
+        return publisherList;
+    }
 
     @Override
     public GraceJSONResult hotList() {
@@ -217,7 +193,28 @@ public class ArticlePortalController implements ArticlePortalControllerApi {
 
     @Override
     public GraceJSONResult detail(String articleId) {
-        return null;
+        ArticleDetailVO detailVO = articlePortalService.queryDetail(articleId);
+
+        Set<String> idSet = new HashSet();
+        idSet.add(detailVO.getPublishUserId());
+        List<AppUserVO> publisherList = getPublisherList(idSet);
+
+        if (!publisherList.isEmpty()) {
+            detailVO.setPublishUserName(publisherList.get(0).getNickname());
+        }
+
+        detailVO.setReadCounts(
+                getCountsFromRedis(Constant.REDIS_ARTICLE_READ_COUNTS + ":" + articleId));
+
+        return GraceJSONResult.ok(detailVO);
+    }
+
+    private Integer getCountsFromRedis(String key) {
+        String countsStr = redis.get(key);
+        if (StringUtils.isBlank(countsStr)) {
+            countsStr = "0";
+        }
+        return Integer.valueOf(countsStr);
     }
 
     @Override
@@ -227,6 +224,11 @@ public class ArticlePortalController implements ArticlePortalControllerApi {
 
     @Override
     public GraceJSONResult readArticle(String articleId, HttpServletRequest request) {
-        return null;
+        String userIp = IPUtil.getRequestIp(request);
+        // 设置针对当前用户ip的永久存在的key，存入到redis，表示该ip的用户已经阅读过了，无法累加阅读量
+        redis.setnx(Constant.REDIS_ALREADY_READ + ":" +  articleId + ":" + userIp, userIp);
+
+        redis.increment(Constant.REDIS_ARTICLE_READ_COUNTS + ":" + articleId, 1);
+        return GraceJSONResult.ok();
     }
 }

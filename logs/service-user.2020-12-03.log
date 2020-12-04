@@ -1,0 +1,72 @@
+2020-12-03 00:28:06.721 [http-nio-8003-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.PassportServiceImpl.getSMSCode====
+2020-12-03 00:28:06.738 [http-nio-8003-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：5
+2020-12-03 00:28:17.434 [http-nio-8003-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.PassportServiceImpl.doLogin====
+2020-12-03 00:28:17.436 [http-nio-8003-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.queryMobileIsExist====
+2020-12-03 00:28:17.493 [http-nio-8003-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：56
+2020-12-03 00:28:17.504 [http-nio-8003-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.createUser====
+2020-12-03 00:28:17.642 [http-nio-8003-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：138
+2020-12-03 00:28:17.793 [http-nio-8003-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：358
+2020-12-03 00:28:19.694 [http-nio-8003-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-12-03 00:28:19.701 [http-nio-8003-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getAccountInfo====
+2020-12-03 00:28:19.708 [http-nio-8003-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：13
+2020-12-03 00:28:19.738 [http-nio-8003-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：37
+2020-12-03 00:28:23.688 [http-nio-8003-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-12-03 00:28:23.693 [http-nio-8003-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：4
+2020-12-03 00:28:26.263 [http-nio-8003-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUser====
+2020-12-03 00:28:26.264 [http-nio-8003-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：1
+2020-12-03 00:28:26.264 [http-nio-8003-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUser====
+2020-12-03 00:28:26.265 [http-nio-8003-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：1
+2020-12-03 00:28:26.580 [http-nio-8003-exec-7] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUser====
+2020-12-03 00:28:26.582 [http-nio-8003-exec-7] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-12-03 00:28:26.582 [http-nio-8003-exec-7] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUser====
+2020-12-03 00:28:26.583 [http-nio-8003-exec-7] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：1
+2020-12-03 00:28:29.712 [http-nio-8003-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-12-03 00:28:29.718 [http-nio-8003-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：5
+2020-12-03 00:28:29.735 [http-nio-8003-exec-8] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUser====
+2020-12-03 00:28:29.738 [http-nio-8003-exec-8] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
+2020-12-03 00:28:33.934 [http-nio-8003-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-12-03 00:28:33.938 [http-nio-8003-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：4
+2020-12-03 00:28:33.967 [http-nio-8003-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUser====
+2020-12-03 00:28:33.970 [http-nio-8003-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-12-03 00:28:33.971 [http-nio-8003-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUser====
+2020-12-03 00:28:33.972 [http-nio-8003-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：1
+2020-12-03 00:28:36.078 [http-nio-8003-exec-9] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-12-03 00:28:36.085 [http-nio-8003-exec-9] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：7
+2020-12-03 00:28:36.095 [http-nio-8003-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUser====
+2020-12-03 00:28:36.097 [http-nio-8003-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-12-03 00:28:38.548 [http-nio-8003-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-12-03 00:28:38.551 [http-nio-8003-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
+2020-12-03 00:28:38.577 [http-nio-8003-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUser====
+2020-12-03 00:28:38.591 [http-nio-8003-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：14
+2020-12-03 00:28:38.591 [http-nio-8003-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUser====
+2020-12-03 00:28:38.593 [http-nio-8003-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：1
+2020-12-03 00:28:40.591 [http-nio-8003-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-12-03 00:28:40.596 [http-nio-8003-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：5
+2020-12-03 00:28:40.602 [http-nio-8003-exec-7] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUser====
+2020-12-03 00:28:40.605 [http-nio-8003-exec-7] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
+2020-12-03 00:28:43.343 [http-nio-8003-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-12-03 00:28:43.347 [http-nio-8003-exec-3] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
+2020-12-03 00:28:43.366 [http-nio-8003-exec-8] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUser====
+2020-12-03 00:28:43.368 [http-nio-8003-exec-8] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-12-03 00:28:43.369 [http-nio-8003-exec-8] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUser====
+2020-12-03 00:28:43.371 [http-nio-8003-exec-8] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-12-03 00:28:44.385 [http-nio-8003-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUser====
+2020-12-03 00:28:44.387 [http-nio-8003-exec-6] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-12-03 00:28:44.432 [http-nio-8003-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-12-03 00:28:44.435 [http-nio-8003-exec-10] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
+2020-12-03 00:28:46.475 [http-nio-8003-exec-9] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-12-03 00:28:46.479 [http-nio-8003-exec-9] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：4
+2020-12-03 00:28:46.509 [http-nio-8003-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUser====
+2020-12-03 00:28:46.512 [http-nio-8003-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
+2020-12-03 00:28:46.512 [http-nio-8003-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUser====
+2020-12-03 00:28:46.513 [http-nio-8003-exec-1] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：1
+2020-12-03 00:28:49.749 [http-nio-8003-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-12-03 00:28:49.754 [http-nio-8003-exec-2] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：5
+2020-12-03 00:28:49.761 [http-nio-8003-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUser====
+2020-12-03 00:28:49.764 [http-nio-8003-exec-4] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
+2020-12-03 00:28:52.438 [http-nio-8003-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUserInfo====
+2020-12-03 00:28:52.442 [http-nio-8003-exec-5] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：4
+2020-12-03 00:28:52.458 [http-nio-8003-exec-7] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUser====
+2020-12-03 00:28:52.460 [http-nio-8003-exec-7] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：2
+2020-12-03 00:28:52.460 [http-nio-8003-exec-7] INFO  com.ltz.news.aspect.ServiceLogAspect - ==== 开始执行 class com.ltz.news.service.impl.UserServiceImpl.getUser====
+2020-12-03 00:28:52.463 [http-nio-8003-exec-7] INFO  com.ltz.news.aspect.ServiceLogAspect - 当前执行耗时：3
