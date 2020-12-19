@@ -219,7 +219,7 @@ public class ArticlePortalController implements ArticlePortalControllerApi {
 
     @Override
     public Integer readCounts(String articleId) {
-        return null;
+        return getCountsFromRedis(Constant.REDIS_ARTICLE_READ_COUNTS + ":" + articleId);
     }
 
     @Override

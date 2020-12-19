@@ -7,20 +7,31 @@ import com.ltz.news.constant.YesOrNo;
 import com.ltz.news.controller.article.ArticleControllerApi;
 import com.ltz.news.pojo.Category;
 import com.ltz.news.pojo.bo.NewArticleBO;
+import com.ltz.news.pojo.vo.ArticleDetailVO;
 import com.ltz.news.result.GraceJSONResult;
 import com.ltz.news.result.ResponseStatusEnum;
 import com.ltz.news.service.IArticleService;
 import com.ltz.news.utils.JsonUtils;
 import com.ltz.news.utils.PagedGridResult;
 import com.ltz.news.utils.RedisOperator;
+import com.mongodb.client.gridfs.GridFSBucket;
+import freemarker.template.Configuration;
+import freemarker.template.Template;
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import org.springframework.http.ResponseEntity;
+import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
+import java.io.File;
+import java.io.InputStream;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static com.ltz.news.constant.Constant.REDIS_ALL_CATEGORY;
 
@@ -131,25 +142,64 @@ public class ArticleController implements ArticleControllerApi {
         // 保存到数据库，更改文章的状态为审核成功或者失败
         articleService.updateArticleStatus(articleId, pendingStatus);
 
-//        if (pendingStatus == ArticleReviewStatus.SUCCESS.type) {
-//            // 审核成功，生成文章详情页静态html
-//            try {
-////                createArticleHTML(articleId);
-//                String articleMongoId = createArticleHTMLToGridFS(articleId);
-//                // 存储到对应的文章，进行关联保存
-//                articleService.updateArticleToGridFS(articleId, articleMongoId);
-//
-//                // 调用消费端，执行下载html
-////                doDownloadArticleHTML(articleId, articleMongoId);
-//
-//                // 发送消息到mq队列，让消费者监听并且执行下载html
-//                doDownloadArticleHTMLByMQ(articleId, articleMongoId);
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//        }
+        if (pendingStatus == ArticleReviewStatus.SUCCESS.type) {
+            // 审核成功，生成文章详情页静态html
+            try {
+                String articleMongoId = createArticleHTMLToGridFS(articleId);
+                // 存储到对应的文章，进行关联保存
+                articleService.updateArticleToGridFS(articleId, articleMongoId);
+
+                // 调用消费端，执行下载html
+//                doDownloadArticleHTML(articleId, articleMongoId);
+
+                // 发送消息到mq队列，让消费者监听并且执行下载html
+                doDownloadArticleHTMLByMQ(articleId, articleMongoId);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
 
         return GraceJSONResult.ok();
+    }
+
+    @Autowired
+    private GridFSBucket gridFSBucket;
+
+    // 文章生成HTML
+    public String createArticleHTMLToGridFS(String articleId) throws Exception {
+
+        Configuration cfg = new Configuration(Configuration.getVersion());
+        String classpath = this.getClass().getResource("/").getPath();
+        cfg.setDirectoryForTemplateLoading(new File(classpath + "templates"));
+
+        Template template = cfg.getTemplate("detail.ftl", "utf-8");
+
+        // 获得文章的详情数据
+        ArticleDetailVO detailVO = getArticleDetail(articleId);
+        Map<String, Object> map = new HashMap<>();
+        map.put("articleDetail", detailVO);
+
+        String htmlContent = FreeMarkerTemplateUtils.processTemplateIntoString(template, map);
+
+        InputStream inputStream = IOUtils.toInputStream(htmlContent);
+        ObjectId fileId = gridFSBucket.uploadFromStream(detailVO.getId() + ".html",inputStream);
+        return fileId.toString();
+    }
+
+
+    // 发起远程调用rest，获得文章详情数据
+    public ArticleDetailVO getArticleDetail(String articleId) {
+        String url
+                = "http://www.imoocnews.com:8001/portal/article/detail?articleId=" + articleId;
+        ResponseEntity<GraceJSONResult> responseEntity
+                = restTemplate.getForEntity(url, GraceJSONResult.class);
+        GraceJSONResult bodyResult = responseEntity.getBody();
+        ArticleDetailVO detailVO = null;
+        if (bodyResult.getStatus() == 200) {
+            String detailJson = JsonUtils.objectToJson(bodyResult.getData());
+            detailVO = JsonUtils.jsonToPojo(detailJson, ArticleDetailVO.class);
+        }
+        return detailVO;
     }
 
     @Override

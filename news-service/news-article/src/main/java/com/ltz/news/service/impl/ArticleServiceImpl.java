@@ -18,7 +18,9 @@ import com.ltz.news.service.IArticleService;
 import com.ltz.news.utils.JsonUtils;
 import com.ltz.news.utils.PagedGridResult;
 import com.ltz.news.utils.RedisOperator;
+import com.mongodb.client.gridfs.GridFSBucket;
 import org.apache.commons.lang3.StringUtils;
+import org.bson.types.ObjectId;
 import org.n3r.idworker.Sid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -222,9 +224,13 @@ public class ArticleServiceImpl implements IArticleService {
      * @param articleId
      * @param articleMongoId
      */
+    @Transactional
     @Override
     public void updateArticleToGridFS(String articleId, String articleMongoId) {
-
+        Article pendingArticle = new Article();
+        pendingArticle.setId(articleId);
+        pendingArticle.setMongoFileId(articleMongoId);
+        articleMapper.updateByPrimaryKeySelective(pendingArticle);
     }
 
     /**
@@ -280,7 +286,7 @@ public class ArticleServiceImpl implements IArticleService {
             GraceException.display(ResponseStatusEnum.ARTICLE_DELETE_ERROR);
         }
 
-//        deleteHTML(articleId);
+        deleteHTML(articleId);
     }
 
     /**
@@ -301,9 +307,34 @@ public class ArticleServiceImpl implements IArticleService {
             GraceException.display(ResponseStatusEnum.ARTICLE_WITHDRAW_ERROR);
         }
 
-//        deleteHTML(articleId);
+        deleteHTML(articleId);
     }
 
+    @Autowired
+    private GridFSBucket gridFSBucket;
+    /**
+     * 文章撤回删除后，删除静态化的html
+     */
+    private void deleteHTML(String articleId) {
+        // 1. 查询文章的mongoFileId
+        Article pending = articleMapper.selectByPrimaryKey(articleId);
+        String articleMongoId = pending.getMongoFileId();
+
+        // 2. 删除GridFS上的文件
+        gridFSBucket.delete(new ObjectId(articleMongoId));
+
+        // 3. 删除消费端的HTML文件
+//        doDeleteArticleHTML(articleId);
+        doDeleteArticleHTMLByMQ(articleId);
+    }
+
+
+//    @Autowired
+//    private RabbitTemplate rabbitTemplate;
+//    private void doDeleteArticleHTMLByMQ(String articleId) {
+//        rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGE_ARTICLE,
+//                "article.html.download.do", articleId);
+//    }
 
     private PagedGridResult setterPagedGrid(List<?> list,
                                             Integer page) {

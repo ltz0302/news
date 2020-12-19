@@ -19,6 +19,7 @@
         <module>news-files</module>
         <module>news-admin</module>
         <module>news-article</module>
+        <module>news-article-html</module>
     </modules>
 
 </project>

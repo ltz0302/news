@@ -7,17 +7,19 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="news-files" />
-        <module name="news-model" />
+        <module name="news-article-html" />
         <module name="mybatis-generator-database" />
         <module name="news-article" />
         <module name="news-admin" />
         <module name="news-api" />
-        <module name="news-user" />
         <module name="news-common" />
+        <module name="news-user" />
+        <module name="news-model" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mybatis-generator" target="1.5" />
+      <module name="news-article-htmla" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -26,6 +28,8 @@
       <module name="news-admin" options="-parameters" />
       <module name="news-api" options="-parameters" />
       <module name="news-article" options="-parameters" />
+      <module name="news-article-html" options="-parameters" />
+      <module name="news-article-htmla" options="-parameters" />
       <module name="news-common" options="-parameters" />
       <module name="news-files" options="-parameters" />
       <module name="news-model" options="-parameters" />

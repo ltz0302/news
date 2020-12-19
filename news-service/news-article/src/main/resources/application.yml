@@ -39,11 +39,20 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
 
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017
+      database: news
   redis:
     database: 0
     host: 127.0.0.1
     port: 6379
 #    password: 123456
+  freemarker:
+    charset: UTF-8
+    content-type: text/html
+    suffix: .ftl
+    template-loader-path: classpath:/templates/
 
 ############################################################
 #
@@ -73,3 +82,4 @@ pagehelper:
 
 website:
   domain-name: imoocnews.com
+
