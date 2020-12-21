@@ -1,0 +1,1089 @@
+2020-12-21 21:54:33.357 [main] INFO  com.ltz.news.ArticleHTMLApplication - No active profile set, falling back to default profiles: default
+2020-12-21 21:54:34.654 [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.ltz.news.mapper]' package. Please check your configuration.
+2020-12-21 21:54:35.152 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-21 21:54:35.154 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-12-21 21:54:35.299 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 134ms. Found 0 MongoDB repository interfaces.
+2020-12-21 21:54:35.331 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-21 21:54:35.334 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-21 21:54:35.476 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 116ms. Found 0 Redis repository interfaces.
+2020-12-21 21:54:35.973 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=f7607944-883a-3089-a53c-4f8a6f3d1650
+2020-12-21 21:54:36.936 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8002 (http)
+2020-12-21 21:54:36.957 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8002"]
+2020-12-21 21:54:36.958 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-21 21:54:36.959 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-12-21 21:54:37.250 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-12-21 21:54:37.251 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3870 ms
+2020-12-21 21:54:38.261 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-12-21 21:54:38.351 [cluster-ClusterId{value='5fe10b8ec900872f30da2577', description='null'}-127.0.0.1:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:11}] to 127.0.0.1:27017
+2020-12-21 21:54:38.362 [cluster-ClusterId{value='5fe10b8ec900872f30da2577', description='null'}-127.0.0.1:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=6895500}
+2020-12-21 21:54:40.561 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-12-21 21:54:40.623 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-12-21 21:54:40.623 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-12-21 21:54:40.636 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-12-21 21:54:40.637 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-12-21 21:54:41.092 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-21 21:54:42.734 [main] WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-12-21 21:54:44.742 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-12-21 21:54:45.268 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [127.0.0.1:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = coupon-1
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2020-12-21 21:54:45.388 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.3.1
+2020-12-21 21:54:45.388 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 18a913733fb71c01
+2020-12-21 21:54:45.388 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1608584085385
+2020-12-21 21:54:45.391 [main] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-1, groupId=coupon-1] Subscribed to topic(s): news_article_op
+2020-12-21 21:54:45.393 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService
+2020-12-21 21:54:45.401 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-12-21 21:54:45.437 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-12-21 21:54:45.498 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-12-21 21:54:45.678 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8002"]
+2020-12-21 21:54:45.705 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8002 (http) with context path ''
+2020-12-21 21:54:47.278 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-12-21 21:54:47.285 [main] INFO  com.ltz.news.ArticleHTMLApplication - Started ArticleHTMLApplication in 18.772 seconds (JVM running for 20.822)
+2020-12-21 21:54:47.702 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:54:49.758 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:54:51.861 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:54:54.118 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:54:56.474 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:54:59.383 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:55:02.561 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:55:05.476 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:55:08.443 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:55:11.619 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:55:14.478 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:55:17.341 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:55:20.204 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:55:23.069 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:55:26.082 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:55:28.945 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:55:31.909 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:55:34.826 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:55:37.711 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:55:40.838 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:55:43.911 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:55:47.035 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:55:50.058 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:55:53.119 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:55:56.276 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:55:59.500 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:56:02.620 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:56:05.649 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:56:08.668 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:56:11.491 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:56:14.713 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:56:17.569 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:56:20.687 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:56:23.556 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:56:26.621 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:56:29.636 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:56:32.569 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:56:35.736 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:56:38.650 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:56:41.510 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:56:44.478 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:56:47.573 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:56:50.690 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:56:53.805 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:56:56.668 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:56:59.528 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:57:02.471 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:57:05.386 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:57:08.486 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:57:11.401 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:57:14.416 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:57:17.284 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:57:20.456 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:57:23.380 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:57:26.394 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:57:29.410 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:57:32.480 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:57:35.341 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:57:38.543 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:57:41.455 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:57:44.367 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:57:47.529 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:57:50.495 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:57:53.408 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:57:56.621 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:57:59.788 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:58:02.988 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:58:05.900 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:58:08.764 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:58:11.880 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:58:14.845 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:58:17.940 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:58:21.010 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:58:23.926 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:58:26.839 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:58:29.954 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:58:33.195 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:58:36.362 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:58:39.429 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:58:42.641 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:58:45.862 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:58:48.924 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:58:51.842 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:58:54.906 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:58:57.743 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:59:00.759 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:59:03.771 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:59:06.684 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:59:09.751 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:59:12.944 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:59:16.159 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:59:19.323 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:59:22.492 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:59:25.354 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:59:28.406 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:59:31.271 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:59:34.387 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:59:37.347 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:59:40.211 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:59:43.152 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:59:46.018 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:59:48.932 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:59:51.799 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:59:54.613 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 21:59:57.599 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:00:00.512 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:00:03.728 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:00:06.596 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:00:09.457 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:00:12.653 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:00:15.567 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:00:18.431 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:00:21.652 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:00:24.715 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:00:27.606 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:00:30.722 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:00:33.684 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:00:36.648 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:00:39.866 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:00:42.957 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:00:46.021 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:00:49.188 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:00:52.254 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:00:55.420 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:00:58.466 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:01:01.479 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:01:04.345 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:01:07.413 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:01:10.479 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:01:13.542 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:01:16.707 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:01:19.676 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:01:22.911 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:01:26.025 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:01:28.937 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:01:32.053 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:01:35.116 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:01:37.963 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:01:40.828 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:01:44.046 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:01:47.162 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:01:50.227 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:01:53.268 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:01:56.229 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:01:59.145 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:02:02.119 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:02:05.234 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:02:08.372 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:02:11.486 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:02:14.550 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:02:17.465 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:02:20.481 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:02:23.598 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:02:26.566 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:02:29.631 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:02:32.872 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:02:35.784 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:02:39.003 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:02:41.812 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:02:44.931 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:02:48.074 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:02:51.088 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:02:54.200 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:02:57.415 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:03:00.278 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:03:03.129 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:03:06.039 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:03:08.902 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:03:12.067 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:03:15.232 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:03:18.146 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:03:21.063 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:03:24.183 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:03:27.153 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:03:30.066 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:03:33.183 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:03:36.149 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:03:39.013 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:03:42.024 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:03:45.037 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:03:48.083 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:03:51.046 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:03:54.260 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:03:57.430 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:04:00.645 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:04:03.558 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:04:06.770 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:04:09.687 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:04:12.679 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:04:15.590 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:04:18.452 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:04:21.569 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:04:24.484 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:04:27.480 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:04:30.491 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:04:33.408 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:04:36.523 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:04:39.640 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:04:42.532 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:04:45.693 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:04:48.859 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:04:51.719 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:04:54.882 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:04:58.042 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:05:01.009 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:05:03.921 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:05:06.936 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:05:10.102 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:05:12.987 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:05:15.901 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:05:18.775 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:05:21.795 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:05:24.657 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:05:27.848 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:05:30.859 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:05:33.819 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:05:37.057 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:05:40.171 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:05:43.354 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:05:46.273 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:05:49.393 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:05:52.407 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:05:55.519 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:05:58.481 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:06:01.547 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:06:04.461 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:06:07.332 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:06:10.397 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:06:13.405 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:06:16.374 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:06:19.286 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:06:22.250 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:06:25.214 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:06:28.358 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:06:31.526 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:06:34.389 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:06:37.300 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:06:40.314 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:06:43.258 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:06:46.473 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:06:49.385 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:06:52.351 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:06:55.217 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:06:58.106 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:07:00.973 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:07:03.886 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:07:06.801 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:07:09.714 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:07:12.705 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:07:15.819 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:07:18.783 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:07:21.596 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:07:24.609 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:07:27.425 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:07:30.289 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:07:33.472 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:07:36.336 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:07:39.401 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:07:42.469 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:07:45.434 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:07:48.319 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:07:51.482 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:07:54.698 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:07:57.561 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:08:00.729 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:08:03.642 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:08:06.762 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:08:09.777 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:08:12.915 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:08:15.781 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:08:18.796 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:08:21.662 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:08:24.579 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:08:27.717 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:08:30.580 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:08:33.742 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:08:36.967 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:08:39.885 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:08:42.869 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:08:46.034 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:08:49.206 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:08:52.178 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:08:56.658 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:08:59.571 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:09:02.776 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:09:05.742 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:09:08.910 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:09:11.874 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:09:14.940 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:09:17.827 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:09:20.941 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:09:24.057 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:09:27.020 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:09:29.982 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:09:32.878 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:09:35.947 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:09:38.917 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:09:41.929 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:09:45.147 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:09:48.033 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:09:50.951 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:09:53.860 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:09:56.978 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:09:59.840 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:10:03.033 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:10:06.253 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:10:09.423 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:10:12.290 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:10:15.505 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:10:18.442 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:10:21.410 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:10:24.479 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:10:27.542 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:10:30.554 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:10:33.571 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:10:36.685 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:10:39.798 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:10:42.987 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:10:45.802 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:10:48.816 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:10:51.881 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:10:54.744 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:10:57.888 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:11:00.903 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:11:03.816 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:11:06.884 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:11:09.848 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:11:13.049 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:11:15.960 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:11:19.177 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:11:22.040 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:11:25.055 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:11:28.045 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:11:31.162 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:11:34.125 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:11:37.187 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:11:40.254 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:11:43.096 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:11:46.012 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:11:49.230 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:11:52.243 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:11:55.105 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:11:58.199 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:12:01.365 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:12:04.583 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:12:07.645 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:12:10.773 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:12:13.688 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:12:16.548 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:12:19.409 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:12:22.594 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:12:28.706 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:12:31.921 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:12:35.087 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:12:37.950 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:12:41.169 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:12:44.139 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:12:47.202 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:12:50.114 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:12:53.057 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:12:56.071 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:12:59.289 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:13:02.363 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:13:05.579 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:13:08.489 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:13:11.403 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:13:14.415 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:13:17.483 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:13:20.550 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:13:23.669 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:13:26.479 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:13:29.393 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:13:32.258 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:13:35.269 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:13:38.222 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:13:41.147 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:13:44.012 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:13:46.825 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:13:49.735 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:13:52.811 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:13:55.925 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:13:58.945 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:14:01.960 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:14:04.925 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:14:07.810 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:14:10.726 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:14:13.739 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:14:16.765 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:14:19.640 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:14:22.812 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:14:25.772 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:14:28.991 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:14:31.953 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:14:34.970 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:14:38.015 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:14:41.125 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:14:44.345 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:14:47.513 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:14:50.428 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:14:53.573 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:14:56.792 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:14:59.962 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:15:03.122 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:15:06.186 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:15:09.307 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:15:12.522 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:15:15.535 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2020-12-21 22:15:25.407 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Error while fetching metadata with correlation id 172 : {news_article_op=LEADER_NOT_AVAILABLE}
+2020-12-21 22:15:25.412 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-1, groupId=coupon-1] Cluster ID: aSSzZMfYTz2Ci5tum40vZw
+2020-12-21 22:15:25.499 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Error while fetching metadata with correlation id 174 : {news_article_op=LEADER_NOT_AVAILABLE}
+2020-12-21 22:15:25.610 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Error while fetching metadata with correlation id 177 : {news_article_op=LEADER_NOT_AVAILABLE}
+2020-12-21 22:15:25.717 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Error while fetching metadata with correlation id 179 : {news_article_op=LEADER_NOT_AVAILABLE}
+2020-12-21 22:15:25.829 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Error while fetching metadata with correlation id 181 : {news_article_op=LEADER_NOT_AVAILABLE}
+2020-12-21 22:15:25.941 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Error while fetching metadata with correlation id 183 : {news_article_op=LEADER_NOT_AVAILABLE}
+2020-12-21 22:15:26.059 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Error while fetching metadata with correlation id 185 : {news_article_op=LEADER_NOT_AVAILABLE}
+2020-12-21 22:15:26.167 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Error while fetching metadata with correlation id 187 : {news_article_op=LEADER_NOT_AVAILABLE}
+2020-12-21 22:15:26.281 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Error while fetching metadata with correlation id 189 : {news_article_op=LEADER_NOT_AVAILABLE}
+2020-12-21 22:15:26.402 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Error while fetching metadata with correlation id 191 : {news_article_op=LEADER_NOT_AVAILABLE}
+2020-12-21 22:15:26.516 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Error while fetching metadata with correlation id 193 : {news_article_op=LEADER_NOT_AVAILABLE}
+2020-12-21 22:15:26.624 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Error while fetching metadata with correlation id 195 : {news_article_op=LEADER_NOT_AVAILABLE}
+2020-12-21 22:15:26.734 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Error while fetching metadata with correlation id 197 : {news_article_op=LEADER_NOT_AVAILABLE}
+2020-12-21 22:15:26.866 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] Discovered group coordinator LAPTOP-LORVQLNM:9092 (id: 2147483647 rack: null)
+2020-12-21 22:15:26.880 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] Revoking previously assigned partitions []
+2020-12-21 22:15:26.881 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - coupon-1: partitions revoked: []
+2020-12-21 22:15:26.881 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] (Re-)joining group
+2020-12-21 22:15:26.923 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] (Re-)joining group
+2020-12-21 22:15:27.025 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] Successfully joined group with generation 1
+2020-12-21 22:15:27.034 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] Setting newly assigned partitions: news_article_op-0
+2020-12-21 22:15:27.057 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ERROR o.s.k.l.KafkaMessageListenerContainer$ListenerConsumer - Stopping container due to an Error
+java.lang.NoSuchMethodError: org.apache.kafka.clients.consumer.Consumer.committed(Ljava/util/Set;)Ljava/util/Map;
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer$ListenerConsumerRebalanceListener.collectAndCommitIfNecessary(KafkaMessageListenerContainer.java:2372)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer$ListenerConsumerRebalanceListener.onPartitionsAssigned(KafkaMessageListenerContainer.java:2350)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.onJoinComplete(ConsumerCoordinator.java:285)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.joinGroupIfNeeded(AbstractCoordinator.java:424)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.ensureActiveGroup(AbstractCoordinator.java:358)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.poll(ConsumerCoordinator.java:353)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.updateAssignmentMetadataIfNeeded(KafkaConsumer.java:1251)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1216)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1201)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doPoll(KafkaMessageListenerContainer.java:1073)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1029)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:960)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-21 22:15:27.059 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] Member consumer-1-a1ae9fda-d2ca-42de-af5e-67cd3f1788cd sending LeaveGroup request to coordinator LAPTOP-LORVQLNM:9092 (id: 2147483647 rack: null)
+2020-12-21 22:15:27.062 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-1, groupId=coupon-1] Unsubscribed all topics or patterns and assigned partitions
+2020-12-21 22:15:27.062 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService
+2020-12-21 22:15:27.079 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer$ListenerConsumer - coupon-1: Consumer stopped
+2020-12-21 22:15:27.080 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ERROR o.s.k.l.KafkaMessageListenerContainer - Error while stopping the container: 
+java.lang.NoSuchMethodError: org.apache.kafka.clients.consumer.Consumer.committed(Ljava/util/Set;)Ljava/util/Map;
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer$ListenerConsumerRebalanceListener.collectAndCommitIfNecessary(KafkaMessageListenerContainer.java:2372)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer$ListenerConsumerRebalanceListener.onPartitionsAssigned(KafkaMessageListenerContainer.java:2350)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.onJoinComplete(ConsumerCoordinator.java:285)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.joinGroupIfNeeded(AbstractCoordinator.java:424)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.ensureActiveGroup(AbstractCoordinator.java:358)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.poll(ConsumerCoordinator.java:353)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.updateAssignmentMetadataIfNeeded(KafkaConsumer.java:1251)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1216)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1201)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doPoll(KafkaMessageListenerContainer.java:1073)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1029)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:960)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-21 22:21:56.394 [main] INFO  com.ltz.news.ArticleHTMLApplication - No active profile set, falling back to default profiles: default
+2020-12-21 22:21:57.357 [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.ltz.news.mapper]' package. Please check your configuration.
+2020-12-21 22:21:57.577 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-21 22:21:57.578 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-12-21 22:21:57.640 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56ms. Found 0 MongoDB repository interfaces.
+2020-12-21 22:21:57.655 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-21 22:21:57.657 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-21 22:21:57.694 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24ms. Found 0 Redis repository interfaces.
+2020-12-21 22:21:57.985 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=f7607944-883a-3089-a53c-4f8a6f3d1650
+2020-12-21 22:21:58.625 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8002 (http)
+2020-12-21 22:21:58.637 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8002"]
+2020-12-21 22:21:58.638 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-21 22:21:58.638 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-12-21 22:21:58.823 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-12-21 22:21:58.824 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2406 ms
+2020-12-21 22:21:59.535 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-12-21 22:21:59.610 [cluster-ClusterId{value='5fe111f74c6b7d16b5fe6829', description='null'}-127.0.0.1:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:25}] to 127.0.0.1:27017
+2020-12-21 22:21:59.618 [cluster-ClusterId{value='5fe111f74c6b7d16b5fe6829', description='null'}-127.0.0.1:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=4396100}
+2020-12-21 22:22:00.952 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-12-21 22:22:00.978 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-12-21 22:22:00.978 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-12-21 22:22:00.984 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-12-21 22:22:00.984 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-12-21 22:22:01.183 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-21 22:22:01.927 [main] WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-12-21 22:22:03.567 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-12-21 22:22:03.763 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [127.0.0.1:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = coupon-1
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2020-12-21 22:22:03.845 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.3.1
+2020-12-21 22:22:03.845 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 18a913733fb71c01
+2020-12-21 22:22:03.845 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1608585723843
+2020-12-21 22:22:03.849 [main] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-1, groupId=coupon-1] Subscribed to topic(s): news_article_op
+2020-12-21 22:22:03.851 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService
+2020-12-21 22:22:03.858 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-12-21 22:22:03.880 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-12-21 22:22:03.930 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-12-21 22:22:04.061 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8002"]
+2020-12-21 22:22:04.084 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8002 (http) with context path ''
+2020-12-21 22:22:04.260 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-1, groupId=coupon-1] Cluster ID: aSSzZMfYTz2Ci5tum40vZw
+2020-12-21 22:22:04.262 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] Discovered group coordinator LAPTOP-LORVQLNM:9092 (id: 2147483647 rack: null)
+2020-12-21 22:22:04.266 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] Revoking previously assigned partitions []
+2020-12-21 22:22:04.267 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - coupon-1: partitions revoked: []
+2020-12-21 22:22:04.267 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] (Re-)joining group
+2020-12-21 22:22:04.281 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] (Re-)joining group
+2020-12-21 22:22:04.295 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] Successfully joined group with generation 3
+2020-12-21 22:22:04.300 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] Setting newly assigned partitions: news_article_op-0
+2020-12-21 22:22:04.309 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ERROR o.s.k.l.KafkaMessageListenerContainer$ListenerConsumer - Stopping container due to an Error
+java.lang.NoSuchMethodError: org.apache.kafka.clients.consumer.Consumer.committed(Ljava/util/Set;)Ljava/util/Map;
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer$ListenerConsumerRebalanceListener.collectAndCommitIfNecessary(KafkaMessageListenerContainer.java:2372)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer$ListenerConsumerRebalanceListener.onPartitionsAssigned(KafkaMessageListenerContainer.java:2350)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.onJoinComplete(ConsumerCoordinator.java:285)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.joinGroupIfNeeded(AbstractCoordinator.java:424)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.ensureActiveGroup(AbstractCoordinator.java:358)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.poll(ConsumerCoordinator.java:353)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.updateAssignmentMetadataIfNeeded(KafkaConsumer.java:1251)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1216)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1201)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doPoll(KafkaMessageListenerContainer.java:1073)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1029)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:960)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-21 22:22:04.311 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] Member consumer-1-eaec3a30-8ab1-47a4-9db1-8d9a0a934879 sending LeaveGroup request to coordinator LAPTOP-LORVQLNM:9092 (id: 2147483647 rack: null)
+2020-12-21 22:22:04.313 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-1, groupId=coupon-1] Unsubscribed all topics or patterns and assigned partitions
+2020-12-21 22:22:04.313 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService
+2020-12-21 22:22:04.324 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer$ListenerConsumer - coupon-1: Consumer stopped
+2020-12-21 22:22:04.326 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ERROR o.s.k.l.KafkaMessageListenerContainer - Error while stopping the container: 
+java.lang.NoSuchMethodError: org.apache.kafka.clients.consumer.Consumer.committed(Ljava/util/Set;)Ljava/util/Map;
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer$ListenerConsumerRebalanceListener.collectAndCommitIfNecessary(KafkaMessageListenerContainer.java:2372)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer$ListenerConsumerRebalanceListener.onPartitionsAssigned(KafkaMessageListenerContainer.java:2350)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.onJoinComplete(ConsumerCoordinator.java:285)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.joinGroupIfNeeded(AbstractCoordinator.java:424)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.ensureActiveGroup(AbstractCoordinator.java:358)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.poll(ConsumerCoordinator.java:353)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.updateAssignmentMetadataIfNeeded(KafkaConsumer.java:1251)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1216)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1201)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doPoll(KafkaMessageListenerContainer.java:1073)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1029)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:960)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-21 22:22:05.681 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-12-21 22:22:05.684 [main] INFO  com.ltz.news.ArticleHTMLApplication - Started ArticleHTMLApplication in 13.905 seconds (JVM running for 15.271)
+2020-12-21 22:23:46.829 [main] INFO  com.ltz.news.ArticleHTMLApplication - No active profile set, falling back to default profiles: default
+2020-12-21 22:23:48.021 [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.ltz.news.mapper]' package. Please check your configuration.
+2020-12-21 22:23:48.224 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-21 22:23:48.225 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-12-21 22:23:48.305 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68ms. Found 0 MongoDB repository interfaces.
+2020-12-21 22:23:48.324 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-21 22:23:48.326 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-21 22:23:48.372 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36ms. Found 0 Redis repository interfaces.
+2020-12-21 22:23:48.731 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=f7607944-883a-3089-a53c-4f8a6f3d1650
+2020-12-21 22:23:49.459 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8002 (http)
+2020-12-21 22:23:49.472 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8002"]
+2020-12-21 22:23:49.473 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-21 22:23:49.473 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-12-21 22:23:49.675 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-12-21 22:23:49.675 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2821 ms
+2020-12-21 22:23:50.400 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-12-21 22:23:50.471 [cluster-ClusterId{value='5fe112662736f15cfe457d5d', description='null'}-127.0.0.1:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:26}] to 127.0.0.1:27017
+2020-12-21 22:23:50.481 [cluster-ClusterId{value='5fe112662736f15cfe457d5d', description='null'}-127.0.0.1:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5241401}
+2020-12-21 22:23:51.803 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-12-21 22:23:51.834 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-12-21 22:23:51.835 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-12-21 22:23:51.842 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-12-21 22:23:51.843 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-12-21 22:23:52.048 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-21 22:23:52.938 [main] WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-12-21 22:23:54.629 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-12-21 22:23:54.848 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [127.0.0.1:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = coupon-1
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2020-12-21 22:23:54.966 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.3.1
+2020-12-21 22:23:54.967 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 18a913733fb71c01
+2020-12-21 22:23:54.967 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1608585834962
+2020-12-21 22:23:54.970 [main] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-1, groupId=coupon-1] Subscribed to topic(s): news_article_op
+2020-12-21 22:23:54.973 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService
+2020-12-21 22:23:54.983 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-12-21 22:23:55.008 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-12-21 22:23:55.089 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-12-21 22:23:55.277 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8002"]
+2020-12-21 22:23:55.310 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8002 (http) with context path ''
+2020-12-21 22:23:55.561 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-1, groupId=coupon-1] Cluster ID: aSSzZMfYTz2Ci5tum40vZw
+2020-12-21 22:23:55.564 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] Discovered group coordinator LAPTOP-LORVQLNM:9092 (id: 2147483647 rack: null)
+2020-12-21 22:23:55.569 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] Revoking previously assigned partitions []
+2020-12-21 22:23:55.570 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - coupon-1: partitions revoked: []
+2020-12-21 22:23:55.570 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] (Re-)joining group
+2020-12-21 22:23:55.589 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] (Re-)joining group
+2020-12-21 22:23:55.605 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] Successfully joined group with generation 5
+2020-12-21 22:23:55.612 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] Setting newly assigned partitions: news_article_op-0
+2020-12-21 22:23:55.624 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ERROR o.s.k.l.KafkaMessageListenerContainer$ListenerConsumer - Stopping container due to an Error
+java.lang.NoSuchMethodError: org.apache.kafka.clients.consumer.Consumer.committed(Ljava/util/Set;)Ljava/util/Map;
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer$ListenerConsumerRebalanceListener.collectAndCommitIfNecessary(KafkaMessageListenerContainer.java:2372)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer$ListenerConsumerRebalanceListener.onPartitionsAssigned(KafkaMessageListenerContainer.java:2350)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.onJoinComplete(ConsumerCoordinator.java:285)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.joinGroupIfNeeded(AbstractCoordinator.java:424)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.ensureActiveGroup(AbstractCoordinator.java:358)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.poll(ConsumerCoordinator.java:353)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.updateAssignmentMetadataIfNeeded(KafkaConsumer.java:1251)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1216)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1201)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doPoll(KafkaMessageListenerContainer.java:1073)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1029)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:960)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-21 22:23:55.626 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] Member consumer-1-3ac3da7f-f63c-4fe7-b36d-458fc3518602 sending LeaveGroup request to coordinator LAPTOP-LORVQLNM:9092 (id: 2147483647 rack: null)
+2020-12-21 22:23:55.628 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-1, groupId=coupon-1] Unsubscribed all topics or patterns and assigned partitions
+2020-12-21 22:23:55.628 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService
+2020-12-21 22:23:55.638 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer$ListenerConsumer - coupon-1: Consumer stopped
+2020-12-21 22:23:55.640 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ERROR o.s.k.l.KafkaMessageListenerContainer - Error while stopping the container: 
+java.lang.NoSuchMethodError: org.apache.kafka.clients.consumer.Consumer.committed(Ljava/util/Set;)Ljava/util/Map;
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer$ListenerConsumerRebalanceListener.collectAndCommitIfNecessary(KafkaMessageListenerContainer.java:2372)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer$ListenerConsumerRebalanceListener.onPartitionsAssigned(KafkaMessageListenerContainer.java:2350)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.onJoinComplete(ConsumerCoordinator.java:285)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.joinGroupIfNeeded(AbstractCoordinator.java:424)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.ensureActiveGroup(AbstractCoordinator.java:358)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.poll(ConsumerCoordinator.java:353)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.updateAssignmentMetadataIfNeeded(KafkaConsumer.java:1251)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1216)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1201)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doPoll(KafkaMessageListenerContainer.java:1073)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1029)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:960)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-21 22:23:57.082 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-12-21 22:23:57.084 [main] INFO  com.ltz.news.ArticleHTMLApplication - Started ArticleHTMLApplication in 15.134 seconds (JVM running for 16.637)
+2020-12-21 22:33:38.609 [main] INFO  com.ltz.news.ArticleHTMLApplication - No active profile set, falling back to default profiles: default
+2020-12-21 22:33:39.551 [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.ltz.news.mapper]' package. Please check your configuration.
+2020-12-21 22:33:39.770 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-21 22:33:39.771 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-12-21 22:33:39.834 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56ms. Found 0 MongoDB repository interfaces.
+2020-12-21 22:33:39.850 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-21 22:33:39.852 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-21 22:33:39.890 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24ms. Found 0 Redis repository interfaces.
+2020-12-21 22:33:40.180 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=f7607944-883a-3089-a53c-4f8a6f3d1650
+2020-12-21 22:33:40.851 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8002 (http)
+2020-12-21 22:33:40.863 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8002"]
+2020-12-21 22:33:40.863 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-21 22:33:40.864 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-12-21 22:33:41.053 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-12-21 22:33:41.053 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2418 ms
+2020-12-21 22:33:41.792 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-12-21 22:33:41.870 [cluster-ClusterId{value='5fe114b5e4fd7334ee389a85', description='null'}-127.0.0.1:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:27}] to 127.0.0.1:27017
+2020-12-21 22:33:41.877 [cluster-ClusterId{value='5fe114b5e4fd7334ee389a85', description='null'}-127.0.0.1:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=4335399}
+2020-12-21 22:33:43.182 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-12-21 22:33:43.211 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-12-21 22:33:43.211 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-12-21 22:33:43.218 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-12-21 22:33:43.219 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-12-21 22:33:43.441 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-21 22:33:44.169 [main] WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-12-21 22:33:45.814 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-12-21 22:33:46.006 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [127.0.0.1:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = coupon-1
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2020-12-21 22:33:46.094 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.3.1
+2020-12-21 22:33:46.094 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 18a913733fb71c01
+2020-12-21 22:33:46.094 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1608586426091
+2020-12-21 22:33:46.097 [main] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-1, groupId=coupon-1] Subscribed to topic(s): news_article_op
+2020-12-21 22:33:46.099 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService
+2020-12-21 22:33:46.106 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-12-21 22:33:46.127 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-12-21 22:33:46.183 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-12-21 22:33:46.316 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8002"]
+2020-12-21 22:33:46.340 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8002 (http) with context path ''
+2020-12-21 22:33:46.515 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-1, groupId=coupon-1] Cluster ID: aSSzZMfYTz2Ci5tum40vZw
+2020-12-21 22:33:46.516 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] Discovered group coordinator LAPTOP-LORVQLNM:9092 (id: 2147483647 rack: null)
+2020-12-21 22:33:46.520 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] Revoking previously assigned partitions []
+2020-12-21 22:33:46.521 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - coupon-1: partitions revoked: []
+2020-12-21 22:33:46.521 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] (Re-)joining group
+2020-12-21 22:33:46.544 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] (Re-)joining group
+2020-12-21 22:33:46.570 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] Successfully joined group with generation 1
+2020-12-21 22:33:46.575 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] Setting newly assigned partitions: news_article_op-0
+2020-12-21 22:33:46.638 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] Found no committed offset for partition news_article_op-0
+2020-12-21 22:33:46.660 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-1, groupId=coupon-1] Resetting offset for partition news_article_op-0 to offset 2.
+2020-12-21 22:33:46.698 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - coupon-1: partitions assigned: [news_article_op-0]
+2020-12-21 22:33:47.975 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-12-21 22:33:47.977 [main] INFO  com.ltz.news.ArticleHTMLApplication - Started ArticleHTMLApplication in 13.828 seconds (JVM running for 15.42)
+2020-12-21 22:35:39.894 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:32}] to 127.0.0.1:27017
+2020-12-21 23:46:18.115 [kafka-coordinator-heartbeat-thread | coupon-1] INFO  o.a.k.clients.FetchSessionHandler - [Consumer clientId=consumer-1, groupId=coupon-1] Error sending fetch request (sessionId=357773851, epoch=8664) to node 0: org.apache.kafka.common.errors.DisconnectException.
+2020-12-21 23:46:18.119 [kafka-coordinator-heartbeat-thread | coupon-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-1, groupId=coupon-1] Group coordinator LAPTOP-LORVQLNM:9092 (id: 2147483647 rack: null) is unavailable or invalid, will attempt rediscovery
+2020-12-21 23:46:20.182 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:46:22.339 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:46:24.595 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:46:27.003 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:46:29.919 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:46:32.931 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:46:35.947 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:46:38.864 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:46:41.927 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:46:44.943 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:46:47.809 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:46:50.672 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:46:53.483 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:46:56.698 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:46:59.734 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:47:02.801 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:47:05.663 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:47:08.876 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:47:12.044 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:47:14.956 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:47:17.917 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:47:21.033 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:47:24.182 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:47:27.245 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:47:30.108 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:47:33.125 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:47:36.091 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:47:39.132 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:47:42.146 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:47:45.362 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:47:48.379 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:47:51.394 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:47:54.536 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:47:57.606 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:48:00.720 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:48:03.581 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:48:06.394 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:48:09.439 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:48:12.402 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:48:15.313 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:48:18.483 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:48:21.498 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:48:24.490 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:48:27.456 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:48:30.470 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:48:33.635 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:48:36.752 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:48:39.639 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:48:42.603 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:48:45.564 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:48:48.727 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:48:51.843 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:48:54.845 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:48:58.062 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:49:00.926 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:49:03.837 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:49:06.752 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:49:09.797 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:49:12.762 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:49:15.930 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:49:18.943 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:49:22.008 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:49:24.975 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:49:28.139 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:49:31.002 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:49:33.996 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:49:36.909 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:49:39.978 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:49:43.145 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:49:46.057 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:49:48.945 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:49:52.110 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:49:55.024 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:49:57.935 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:50:01.052 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:50:04.046 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:50:07.009 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:50:09.872 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:50:13.036 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:50:15.949 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.
+2020-12-21 23:50:18.859 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-1, groupId=coupon-1] Connection to node 0 (LAPTOP-LORVQLNM/169.254.236.138:9092) could not be established. Broker may not be available.

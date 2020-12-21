@@ -53,6 +53,11 @@ spring:
     content-type: text/html
     suffix: .ftl
     template-loader-path: classpath:/templates/
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    consumer:
+      group-id: news-x
+      auto-offset-reset: latest
 
 ############################################################
 #
@@ -83,8 +88,3 @@ pagehelper:
 website:
   domain-name: imoocnews.com
 
-# 定义freemarker生成的html位置
-freemarker:
-  html:
-#    target: /workspace/freemarker_html
-    article: C:\Users\HP\Desktop\java\utils\apache-tomcat-9.0.35\webapps\imooc-news\portal\a

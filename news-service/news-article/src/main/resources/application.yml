@@ -53,6 +53,11 @@ spring:
     content-type: text/html
     suffix: .ftl
     template-loader-path: classpath:/templates/
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    consumer:
+      group-id: news-x
+      auto-offset-reset: latest
 
 ############################################################
 #

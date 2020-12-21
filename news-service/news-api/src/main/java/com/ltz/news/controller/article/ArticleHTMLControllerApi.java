@@ -12,9 +12,9 @@ public interface ArticleHTMLControllerApi {
 
     @GetMapping("download")
     @ApiOperation(value = "下载html", notes = "下载html", httpMethod = "GET")
-    public Integer download(String articleId, String articleMongoId) throws Exception;
+    Integer download(String articleId, String articleMongoId) throws Exception;
 
     @GetMapping("delete")
     @ApiOperation(value = "删除html", notes = "删除html", httpMethod = "GET")
-    public Integer delete(String articleId) throws Exception;
+    Integer delete(String articleId) throws Exception;
 }

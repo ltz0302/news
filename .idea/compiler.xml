@@ -12,9 +12,9 @@
         <module name="news-article" />
         <module name="news-admin" />
         <module name="news-api" />
-        <module name="news-common" />
         <module name="news-user" />
         <module name="news-model" />
+        <module name="news-common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

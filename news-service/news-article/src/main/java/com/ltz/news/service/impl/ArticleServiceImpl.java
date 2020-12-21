@@ -1,16 +1,15 @@
 package com.ltz.news.service.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.ltz.news.constant.ArticleAppointType;
-import com.ltz.news.constant.ArticleCoverType;
-import com.ltz.news.constant.ArticleReviewStatus;
-import com.ltz.news.constant.YesOrNo;
+import com.ltz.news.constant.*;
 import com.ltz.news.exception.GraceException;
 import com.ltz.news.mapper.ArticleMapper;
 import com.ltz.news.mapper.ArticleMapperCustom;
 import com.ltz.news.pojo.Article;
 import com.ltz.news.pojo.Category;
+import com.ltz.news.pojo.NewsKafkaMessage;
 import com.ltz.news.pojo.bo.NewArticleBO;
 import com.ltz.news.result.GraceJSONResult;
 import com.ltz.news.result.ResponseStatusEnum;
@@ -24,6 +23,7 @@ import org.bson.types.ObjectId;
 import org.n3r.idworker.Sid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
@@ -43,6 +43,9 @@ public class ArticleServiceImpl implements IArticleService {
 
     @Autowired
     private ArticleMapperCustom articleMapperCustom;
+
+    @Autowired
+    private KafkaTemplate<String, String> kafkaTemplate;
 
     /**
      * 发布文章
@@ -325,16 +328,17 @@ public class ArticleServiceImpl implements IArticleService {
 
         // 3. 删除消费端的HTML文件
 //        doDeleteArticleHTML(articleId);
-        doDeleteArticleHTMLByMQ(articleId);
+        doDeleteArticleHTMLByKafka(articleId);
     }
 
 
-//    @Autowired
-//    private RabbitTemplate rabbitTemplate;
-//    private void doDeleteArticleHTMLByMQ(String articleId) {
-//        rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGE_ARTICLE,
-//                "article.html.download.do", articleId);
-//    }
+
+    private void doDeleteArticleHTMLByKafka(String articleId) {
+        kafkaTemplate.send(Constant.TOPIC, JSON.toJSONString(new NewsKafkaMessage(
+                1,
+                articleId
+        )));
+    }
 
     private PagedGridResult setterPagedGrid(List<?> list,
                                             Integer page) {

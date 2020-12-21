@@ -16,4 +16,7 @@ public class Constant {
     public static final Integer COOKIE_DELETE = 0;
     public static final Integer COMMON_START_PAGE = 1;
     public static final Integer COMMON_PAGE_SIZE = 10;
+
+    //Kafka消息的Topic
+    public static final String TOPIC = "news_article_op";
 }

@@ -1,11 +1,13 @@
 package com.ltz.news.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.ltz.news.constant.ArticleCoverType;
 import com.ltz.news.constant.ArticleReviewStatus;
 import com.ltz.news.constant.Constant;
 import com.ltz.news.constant.YesOrNo;
 import com.ltz.news.controller.article.ArticleControllerApi;
 import com.ltz.news.pojo.Category;
+import com.ltz.news.pojo.NewsKafkaMessage;
 import com.ltz.news.pojo.bo.NewArticleBO;
 import com.ltz.news.pojo.vo.ArticleDetailVO;
 import com.ltz.news.result.GraceJSONResult;
@@ -22,8 +24,11 @@ import org.apache.commons.lang3.StringUtils;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.web.client.RestTemplate;
 
 import javax.validation.Valid;
 import java.io.File;
@@ -32,6 +37,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 
 import static com.ltz.news.constant.Constant.REDIS_ALL_CATEGORY;
 
@@ -43,6 +49,12 @@ public class ArticleController implements ArticleControllerApi {
 
     @Autowired
     private RedisOperator redis;
+
+    @Autowired
+    private KafkaTemplate<String,String> kafkaTemplate;
+
+    @Autowired
+    private RestTemplate restTemplate;
 
     @Override
     public GraceJSONResult createArticle(@Valid NewArticleBO newArticleBO) {
@@ -153,7 +165,7 @@ public class ArticleController implements ArticleControllerApi {
 //                doDownloadArticleHTML(articleId, articleMongoId);
 
                 // 发送消息到mq队列，让消费者监听并且执行下载html
-                doDownloadArticleHTMLByMQ(articleId, articleMongoId);
+                doDownloadArticleHTMLByKafka(articleId, articleMongoId);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -161,6 +173,15 @@ public class ArticleController implements ArticleControllerApi {
 
         return GraceJSONResult.ok();
     }
+
+
+
+    private void doDownloadArticleHTMLByKafka(String articleId, String articleMongoId) {
+        kafkaTemplate.send(Constant.TOPIC, JSON.toJSONString(new NewsKafkaMessage(
+                0,articleId+"," + articleMongoId
+        )));
+    }
+
 
     @Autowired
     private GridFSBucket gridFSBucket;

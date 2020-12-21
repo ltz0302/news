@@ -51,6 +51,7 @@
         <fastjson.version>1.2.51</fastjson.version>
         <cos_api.version>5.6.24</cos_api.version>
         <springboot-freemarker.version>2.2.8.RELEASE</springboot-freemarker.version>
+        <spring-kafka.version>2.4.1.RELEASE</spring-kafka.version>
     </properties>
 
 
@@ -202,6 +203,12 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-freemarker</artifactId>
                 <version>${springboot-freemarker.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.kafka</groupId>
+                <artifactId>spring-kafka</artifactId>
+                <version>${spring-kafka.version}</version>
             </dependency>
 
         </dependencies>
