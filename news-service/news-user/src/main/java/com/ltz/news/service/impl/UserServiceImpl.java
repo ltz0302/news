@@ -19,11 +19,10 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.BindingResult;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.Date;
-import java.util.Map;
+
 
 
 
@@ -139,13 +138,9 @@ public class UserServiceImpl implements IUserService {
 
 
     @Override
-    public GraceJSONResult updateUserInfo(UpdateUserInfoBO updateUserInfoBO, BindingResult result) {
+    public GraceJSONResult updateUserInfo(UpdateUserInfoBO updateUserInfoBO) {
 
-        // 0. 校验BO
-        if (result.hasErrors()) {
-            Map<String, String> map = ControllerUtils.getErrors(result);
-            return GraceJSONResult.errorMap(map);
-        }
+
         // 1. 执行更新操作
         String userId = updateUserInfoBO.getId();
         // 保证双写一致，先删除redis中的数据，后更新数据库

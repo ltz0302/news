@@ -88,3 +88,31 @@ pagehelper:
 website:
   domain-name: imoocnews.com
 
+############################################################
+#
+# eureka client 配置信息
+#
+############################################################
+eureka:
+  # 自定义eureka server的信息
+  server:
+    hostname: localhost
+    port: 7000
+  client:
+    service-url:
+      defaultZone: http://${eureka.server.hostname}:${eureka.server.port}/eureka/
+
+logging:
+  level:
+    com.ltz.news.controller.user.UserControllerApi: debug
+#    root: debug
+
+# 配置feign
+feign:
+  client:
+    config:
+      # 配置服务提供方的名称
+      service-user:
+        loggerLevel: FULL
+  hystrix:
+    enabled: true   # Hystrix 默认是关闭的

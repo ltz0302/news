@@ -4,7 +4,6 @@ import com.ltz.news.pojo.bo.RegistLoginBO;
 import com.ltz.news.result.GraceJSONResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -22,7 +21,6 @@ public interface PassportControllerApi {
     @ApiOperation(value = "一键注册登录接口", notes = "一键注册登录接口", httpMethod = "POST")
     @PostMapping("/doLogin")
     GraceJSONResult doLogin(@RequestBody @Valid RegistLoginBO registLoginBO,
-                                   BindingResult result,
                                    HttpServletRequest request,
                                    HttpServletResponse response);
 

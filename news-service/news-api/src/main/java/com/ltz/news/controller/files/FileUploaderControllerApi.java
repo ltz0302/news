@@ -1,9 +1,11 @@
 package com.ltz.news.controller.files;
 
+import com.ltz.news.config.MyServiceList;
 import com.ltz.news.pojo.bo.NewAdminBO;
 import com.ltz.news.result.GraceJSONResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -35,7 +37,7 @@ public interface FileUploaderControllerApi {
      * @throws Exception
      */
     @PostMapping("/uploadSomeFiles")
-    public GraceJSONResult uploadSomeFiles(@RequestParam String userId,
+    GraceJSONResult uploadSomeFiles(@RequestParam String userId,
                                            MultipartFile[] files) throws Exception;
 
 
@@ -77,6 +79,5 @@ public interface FileUploaderControllerApi {
     @GetMapping("/readFace64InGridFS")
     GraceJSONResult readFace64InGridFS(String faceId,
                                        HttpServletRequest request,
-                                       HttpServletResponse response)
-            throws Exception;
+                                       HttpServletResponse response) throws Exception;
 }

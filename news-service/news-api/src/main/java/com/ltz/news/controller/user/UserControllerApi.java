@@ -1,16 +1,19 @@
 package com.ltz.news.controller.user;
 
+import com.ltz.news.config.MyServiceList;
+import com.ltz.news.controller.user.fallcacks.UserControllerFactoryFallback;
 import com.ltz.news.pojo.bo.UpdateUserInfoBO;
 import com.ltz.news.result.GraceJSONResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.validation.BindingResult;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
 @Api(value = "用户信息相关Controller", tags = {"用户信息相关Controller"})
 @RequestMapping("user")
+@FeignClient(value = MyServiceList.SERVICE_USER,fallbackFactory = UserControllerFactoryFallback.class)
 public interface UserControllerApi {
 
     @ApiOperation(value = "获得用户基本信息", notes = "获得用户基本信息", httpMethod = "POST")
@@ -24,8 +27,7 @@ public interface UserControllerApi {
     @ApiOperation(value = "修改/完善用户信息", notes = "修改/完善用户信息", httpMethod = "POST")
     @PostMapping("/updateUserInfo")
     GraceJSONResult updateUserInfo(
-            @RequestBody @Valid UpdateUserInfoBO updateUserInfoBO,
-            BindingResult result);
+            @RequestBody @Valid UpdateUserInfoBO updateUserInfoBO);
 
     @ApiOperation(value = "根据用户的ids查询用户列表", notes = "根据用户的ids查询用户列表", httpMethod = "GET")
     @GetMapping("/queryByIds")

@@ -1,16 +1,15 @@
 package com.ltz.news.controller.article;
 
+import com.ltz.news.config.MyServiceList;
 import com.ltz.news.result.GraceJSONResult;
-import com.ltz.news.pojo.bo.NewArticleBO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
-import org.springframework.validation.BindingResult;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
-import java.util.Date;
+
 
 @Api(value = "门户端文章业务的controller", tags = {"门户端文章业务的controller"})
 @RequestMapping("portal/article")

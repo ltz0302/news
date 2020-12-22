@@ -52,6 +52,7 @@ public class AdminUserServiceImpl implements IAdminUserService {
     @Autowired
     private RestTemplate restTemplate;
 
+
     @Autowired
     private FaceVerifyUtils faceVerifyUtils;
 
@@ -252,7 +253,7 @@ public class AdminUserServiceImpl implements IAdminUserService {
 
 
     @Override
-    public GraceJSONResult adminFaceLogin(AdminLoginBO adminLoginBO, HttpServletRequest request, HttpServletResponse response) {
+    public GraceJSONResult adminFaceLogin(AdminLoginBO adminLoginBO, HttpServletRequest request, HttpServletResponse response){
         // 0. 判断用户名和人脸信息不能为空
         if (StringUtils.isBlank(adminLoginBO.getUsername())) {
             return GraceJSONResult.errorCustom(ResponseStatusEnum.ADMIN_USERNAME_NULL_ERROR);
@@ -271,7 +272,6 @@ public class AdminUserServiceImpl implements IAdminUserService {
         }
 
         // 2. 请求文件服务，获得人脸数据的base64数据
-        // TODO
         String fileServerUrlExecute
                 = "http://files.imoocnews.com:8004/fs/readFace64InGridFS?faceId=" + adminFaceId;
         ResponseEntity<GraceJSONResult> responseEntity

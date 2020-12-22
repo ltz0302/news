@@ -11,7 +11,6 @@ import com.ltz.news.utils.JsonUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
@@ -35,9 +34,8 @@ public class UserController implements UserControllerApi {
 
     @Override
     public GraceJSONResult updateUserInfo(
-            @Valid UpdateUserInfoBO updateUserInfoBO,
-            BindingResult result) {
-        return userService.updateUserInfo(updateUserInfoBO,result);
+            @Valid UpdateUserInfoBO updateUserInfoBO) {
+        return userService.updateUserInfo(updateUserInfoBO);
     }
 
     @Override

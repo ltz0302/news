@@ -18,7 +18,7 @@ public interface CategoryMngControllerApi {
     @PostMapping("saveOrUpdateCategory")
     @ApiOperation(value = "新增或修改分类", notes = "新增或修改分类", httpMethod = "POST")
     GraceJSONResult saveOrUpdateCategory(@RequestBody @Valid SaveCategoryBO saveCategoryBO);
-    //                                                BindingResult result);
+    //
     @PostMapping("getCatList")
     @ApiOperation(value = "查询分类列表", notes = "查询分类列表", httpMethod = "POST")
     GraceJSONResult getCatList();

@@ -24,6 +24,6 @@ public interface IUploaderService {
 
     void readInGridFS(String faceId, HttpServletRequest request, HttpServletResponse response) throws Exception;
 
-    GraceJSONResult readFace64InGridFS(String faceId, HttpServletRequest request, HttpServletResponse response) throws Exception;
+    GraceJSONResult readFace64InGridFS(String faceId, HttpServletRequest request, HttpServletResponse response) throws Exception ;
 
 }

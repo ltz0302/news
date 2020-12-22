@@ -6,7 +6,6 @@ import com.ltz.news.controller.user.PassportControllerApi;
 import com.ltz.news.result.GraceJSONResult;
 import com.ltz.news.service.IPassportService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,8 +26,8 @@ public class PassportController implements PassportControllerApi {
     }
 
     @Override
-    public GraceJSONResult doLogin(@Valid RegistLoginBO registLoginBO, BindingResult result, HttpServletRequest request, HttpServletResponse response) {
-        return passportService.doLogin(registLoginBO,result,request,response);
+    public GraceJSONResult doLogin(@Valid RegistLoginBO registLoginBO, HttpServletRequest request, HttpServletResponse response) {
+        return passportService.doLogin(registLoginBO,request,response);
     }
 
     @Override

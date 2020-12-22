@@ -12,14 +12,13 @@ import com.ltz.news.utils.*;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.validation.BindingResult;
 
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-import java.util.Map;
+
 import java.util.UUID;
 
 
@@ -58,12 +57,7 @@ public class PassportServiceImpl implements IPassportService {
 
 
     @Override
-    public GraceJSONResult doLogin(RegistLoginBO registLoginBO, BindingResult result, HttpServletRequest request, HttpServletResponse response) {
-        // 0.判断BindingResult中是否保存了错误的验证信息，如果有，则需要返回
-        if (result.hasErrors()) {
-            Map<String, String> map = ControllerUtils.getErrors(result);
-            return GraceJSONResult.errorMap(map);
-        }
+    public GraceJSONResult doLogin(RegistLoginBO registLoginBO,HttpServletRequest request, HttpServletResponse response) {
 
         String mobile = registLoginBO.getMobile();
         String smsCode = registLoginBO.getSmsCode();

@@ -43,3 +43,19 @@ freemarker:
   html:
 #    target: /workspace/freemarker_html
     article: C:\Users\HP\Desktop\java\utils\apache-tomcat-9.0.35\webapps\imooc-news\portal\a
+
+
+
+############################################################
+#
+# eureka client 配置信息
+#
+############################################################
+eureka:
+  # 自定义eureka server的信息
+  server:
+    hostname: localhost
+    port: 7000
+  client:
+    service-url:
+      defaultZone: http://${eureka.server.hostname}:${eureka.server.port}/eureka/

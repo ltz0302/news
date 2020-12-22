@@ -7,14 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="news-files" />
+        <module name="news-eureka" />
         <module name="news-article-html" />
         <module name="mybatis-generator-database" />
         <module name="news-article" />
         <module name="news-admin" />
         <module name="news-api" />
+        <module name="news-common" />
         <module name="news-user" />
         <module name="news-model" />
-        <module name="news-common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -31,6 +32,7 @@
       <module name="news-article-html" options="-parameters" />
       <module name="news-article-htmla" options="-parameters" />
       <module name="news-common" options="-parameters" />
+      <module name="news-eureka" options="-parameters" />
       <module name="news-files" options="-parameters" />
       <module name="news-model" options="-parameters" />
       <module name="news-service" options="" />

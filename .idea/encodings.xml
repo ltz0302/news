@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/mybatis-generator-database/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatis-generator-database/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/news-eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/news-service/news-admin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/news-service/news-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/news-service/news-article-html/src/main/java" charset="UTF-8" />

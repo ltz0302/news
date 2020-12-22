@@ -3,7 +3,7 @@ package com.ltz.news.service;
 import com.ltz.news.pojo.bo.UpdateUserInfoBO;
 import com.ltz.news.pojo.AppUser;
 import com.ltz.news.result.GraceJSONResult;
-import org.springframework.validation.BindingResult;
+
 
 public interface IUserService {
 
@@ -37,6 +37,6 @@ public interface IUserService {
     /**
      * 用户修改信息，完善资料，并且激活
      */
-    GraceJSONResult updateUserInfo(UpdateUserInfoBO updateUserInfoBO, BindingResult result);
+    GraceJSONResult updateUserInfo(UpdateUserInfoBO updateUserInfoBO);
 
 }
