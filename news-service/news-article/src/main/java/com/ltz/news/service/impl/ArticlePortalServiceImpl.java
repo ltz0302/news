@@ -35,13 +35,13 @@ public class ArticlePortalServiceImpl implements IArticlePortalService {
     public PagedGridResult queryIndexArticleList(String keyword, Integer category, Integer page, Integer pageSize) {
         Example articleExample = new Example(Article.class);
         Example.Criteria criteria = setDefualArticleExample(articleExample);
-//
-//        if (StringUtils.isNotBlank(keyword)) {
-//            criteria.andLike("title", "%" + keyword + "%");
-//        }
-//        if (category != null) {
-//            criteria.andEqualTo("categoryId", category);
-//        }
+
+        if (StringUtils.isNotBlank(keyword)) {
+            criteria.andLike("title", "%" + keyword + "%");
+        }
+        if (category != null) {
+            criteria.andEqualTo("categoryId", category);
+        }
 
         PageHelper.startPage(page, pageSize);
         List<Article> list = articleMapper.selectByExample(articleExample);

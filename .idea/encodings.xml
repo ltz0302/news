@@ -12,5 +12,6 @@
     <file url="file://$PROJECT_DIR$/news-service/news-files/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/news-service/news-model/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/news-service/news-user/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/news-zuul/src/main/java" charset="UTF-8" />
   </component>
 </project>

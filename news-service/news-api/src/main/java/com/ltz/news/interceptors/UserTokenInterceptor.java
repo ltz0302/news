@@ -20,7 +20,6 @@ public class UserTokenInterceptor extends BaseInterceptor implements HandlerInte
 
         String userId = request.getHeader("headerUserId");
         String userToken = request.getHeader("headerUserToken");
-
         // 判断是否放行
         boolean run = verifyUserIdToken(userId, userToken, REDIS_USER_TOKEN);
 

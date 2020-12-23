@@ -24,8 +24,6 @@ public class ArticleHTMLComponent {
     public Integer download(String articleId, String articleMongoId)
             throws Exception {
 
-        System.out.println(articleId);
-        System.out.println(articleMongoId);
         // 拼接最终文件的保存的地址
         String path = articlePath + File.separator + articleId + ".html";
 

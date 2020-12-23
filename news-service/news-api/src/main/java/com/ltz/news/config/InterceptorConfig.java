@@ -66,6 +66,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
 
         registry.addInterceptor(articleReadInterceptor())
                 .addPathPatterns("/portal/article/readArticle");
+
     }
 
 }
