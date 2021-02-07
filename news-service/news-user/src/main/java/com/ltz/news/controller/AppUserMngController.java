@@ -3,15 +3,19 @@ package com.ltz.news.controller;
 import com.ltz.news.constant.Constant;
 import com.ltz.news.constant.UserStatus;
 import com.ltz.news.controller.user.AppUserMngControllerApi;
+import com.ltz.news.pojo.vo.PublisherVO;
 import com.ltz.news.result.GraceJSONResult;
 import com.ltz.news.result.ResponseStatusEnum;
 import com.ltz.news.service.IAppUserMngService;
 import com.ltz.news.service.IUserService;
+import com.ltz.news.utils.JsonUtils;
 import com.ltz.news.utils.PagedGridResult;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
+import java.util.List;
 
 @RestController
 public class AppUserMngController implements AppUserMngControllerApi {
@@ -62,6 +66,15 @@ public class AppUserMngController implements AppUserMngControllerApi {
 
     @Override
     public GraceJSONResult queryAll(String userIds) {
-        return null;
+        if (StringUtils.isBlank(userIds)) {
+            return GraceJSONResult.errorCustom(ResponseStatusEnum.USER_NOT_EXIST_ERROR);
+        }
+
+        List<String> userIdList = JsonUtils.jsonToList(userIds, String.class);
+
+
+        List<PublisherVO> userList = userService.getUserList(userIdList);
+
+        return GraceJSONResult.ok(userList);
     }
 }

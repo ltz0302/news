@@ -8,12 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public interface IUploaderService {
-    /**
-     * 使用COS上传文件
-     */
-    String uploadCOS(MultipartFile file,
-                            String userId,
-                            String fileExtName) throws Exception;
 
     GraceJSONResult uploadFace(String userId,
                                MultipartFile file) throws Exception;

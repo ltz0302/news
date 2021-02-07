@@ -71,7 +71,6 @@ public class CategoryServiceImpl implements ICategoryService {
      * @param category
      */
     @Transactional
-    @Override
     public void createCategory(Category category) {
         // 分类不会很多，所以id不需要自增，这个表的数据也不会多到几万甚至分表，数据都会集中在一起
         int result = categoryMapper.insert(category);
@@ -98,7 +97,6 @@ public class CategoryServiceImpl implements ICategoryService {
      */
 
     @Transactional
-    @Override
     public void modifyCategory(Category category) {
         int result = categoryMapper.updateByPrimaryKey(category);
         if (result != 1) {

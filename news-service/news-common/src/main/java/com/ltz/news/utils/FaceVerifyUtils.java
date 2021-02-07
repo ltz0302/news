@@ -178,13 +178,10 @@ public class FaceVerifyUtils {
     public String sendPostVerifyFace(int type, String face1, String face2) throws Exception {
 
 
-//        String secretId = tengxunyunResource.getSecretId();
-//        String secretKey = tengxunyunResource.getSecretKey();
-//        String region = tengxunyunResource.getRegion();
+        String secretId = tengxunyunResource.getSecretId();
+        String secretKey = tengxunyunResource.getSecretKey();
+        String region = tengxunyunResource.getRegion();
 
-        String secretId = "AKIDIL7G8lnUpthBPMwRaV9YklVyBD3ddyy2";
-        String secretKey = "yfr6LK2MPCi03pLafUTCeqBKBm81zigO";
-        String region = "ap-guangzhou";
         try {
             Credential cred = new Credential(secretId, secretKey);
 

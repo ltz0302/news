@@ -40,16 +40,6 @@ public class UserController implements UserControllerApi {
 
     @Override
     public GraceJSONResult queryByIds(String userIds) {
-        // 1. 手动触发异常
-//        int a = 1 / 0;
-
-        // 2. 模拟超时异常
-//        try {
-//            Thread.sleep(6000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-
 
         if (StringUtils.isBlank(userIds)) {
             return GraceJSONResult.errorCustom(ResponseStatusEnum.USER_NOT_EXIST_ERROR);
@@ -58,17 +48,6 @@ public class UserController implements UserControllerApi {
         List<AppUserVO> publisherList = new ArrayList<>();
         List<String> userIdList = JsonUtils.jsonToList(userIds, String.class);
 
-//        // FIXME: 仅用于dev测试，硬编码动态判断来抛出异常
-//        if (userIdList.size() > 1) {
-//            System.out.println("出现异常~~");
-//            throw new RuntimeException("出现异常~~");
-//        }
-
-        // FIXME: 仅用于dev，硬编码动态判断抛出异常
-//        if (!userIdList.get(0).equalsIgnoreCase("200628AFYM7AGWPH")) {
-//            System.out.println("出异常啦~");
-//            throw new RuntimeException("出异常啦~");
-//        }
 
         for (String userId : userIdList) {
             // 获得用户基本信息

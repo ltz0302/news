@@ -1,12 +1,14 @@
 package com.ltz.news.service.impl;
 
 import com.ltz.news.constant.Constant;
+import com.ltz.news.mapper.AppUserMapperCustom;
 import com.ltz.news.pojo.bo.UpdateUserInfoBO;
 import com.ltz.news.constant.Sex;
 import com.ltz.news.constant.UserStatus;
 import com.ltz.news.exception.GraceException;
 import com.ltz.news.mapper.AppUserMapper;
 import com.ltz.news.pojo.AppUser;
+import com.ltz.news.pojo.vo.PublisherVO;
 import com.ltz.news.result.GraceJSONResult;
 import com.ltz.news.result.ResponseStatusEnum;
 import com.ltz.news.service.IUserService;
@@ -22,9 +24,9 @@ import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.Date;
-
-
-
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 @Service
@@ -36,6 +38,10 @@ public class UserServiceImpl implements IUserService {
 
     @Autowired
     private RedisOperator redis;
+
+    @Autowired
+    public AppUserMapperCustom appUserMapperCustom;
+
 
     @Autowired
     private Sid sid;
@@ -189,5 +195,19 @@ public class UserServiceImpl implements IUserService {
             redis.set(Constant.REDIS_USER_INFO + ":" + userId, JsonUtils.objectToJson(user));
         }
         return user;
+    }
+
+    /**
+     * 根据用户id查询用户
+     *
+     * @param userIdList
+     */
+    @Override
+    public List<PublisherVO> getUserList(List<String> userIdList) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("userIdList", userIdList);
+        List<PublisherVO> publisherList = appUserMapperCustom.getUserList(map);
+
+        return publisherList;
     }
 }

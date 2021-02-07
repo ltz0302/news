@@ -58,6 +58,69 @@ public class ArticlePortalController implements ArticlePortalControllerApi {
         return GraceJSONResult.ok(gridResult);
     }
 
+    @Override
+    public GraceJSONResult hotList() {
+
+        return GraceJSONResult.ok(articlePortalService.queryHotList());
+    }
+
+    @Override
+    public GraceJSONResult queryArticleListOfWriter(String writerId, Integer page, Integer pageSize) {
+
+        if (page == null) {
+            page = Constant.COMMON_START_PAGE;
+        }
+
+        if (pageSize == null) {
+            pageSize = Constant.COMMON_PAGE_SIZE;
+        }
+
+        PagedGridResult gridResult = articlePortalService.queryArticleListOfWriter(writerId, page, pageSize);
+        gridResult = rebuildArticleGrid(gridResult);
+        return GraceJSONResult.ok(gridResult);
+    }
+
+    @Override
+    public GraceJSONResult queryGoodArticleListOfWriter(String writerId) {
+
+        PagedGridResult gridResult = articlePortalService.queryGoodArticleListOfWriter(writerId);
+        return GraceJSONResult.ok(gridResult);
+    }
+
+    @Override
+    public GraceJSONResult detail(String articleId) {
+        ArticleDetailVO detailVO = articlePortalService.queryDetail(articleId);
+
+        Set<String> idSet = new HashSet();
+        idSet.add(detailVO.getPublishUserId());
+        List<AppUserVO> publisherList = getPublisherList(idSet);
+
+        if (!publisherList.isEmpty()) {
+            detailVO.setPublishUserName(publisherList.get(0).getNickname());
+        }
+
+        detailVO.setReadCounts(
+                getCountsFromRedis(Constant.REDIS_ARTICLE_READ_COUNTS + ":" + articleId));
+
+        return GraceJSONResult.ok(detailVO);
+    }
+
+    @Override
+    public Integer readCounts(String articleId) {
+        return getCountsFromRedis(Constant.REDIS_ARTICLE_READ_COUNTS + ":" + articleId);
+    }
+
+    @Override
+    public GraceJSONResult readArticle(String articleId, HttpServletRequest request) {
+        String userIp = IPUtil.getRequestIp(request);
+        // 设置针对当前用户ip的永久存在的key，存入到redis，表示该ip的用户已经阅读过了，无法累加阅读量
+        redis.setnx(Constant.REDIS_ALREADY_READ + ":" +  articleId + ":" + userIp, userIp);
+
+        redis.increment(Constant.REDIS_ARTICLE_READ_COUNTS + ":" + articleId, 1);
+        return GraceJSONResult.ok();
+    }
+
+
     private PagedGridResult rebuildArticleGrid(PagedGridResult gridResult) {
         // START
 
@@ -135,74 +198,11 @@ public class ArticlePortalController implements ArticlePortalControllerApi {
         return publisherList;
     }
 
-    @Override
-    public GraceJSONResult hotList() {
-
-        return GraceJSONResult.ok(articlePortalService.queryHotList());
-    }
-
-    @Override
-    public GraceJSONResult queryArticleListOfWriter(String writerId, Integer page, Integer pageSize) {
-
-        if (page == null) {
-            page = Constant.COMMON_START_PAGE;
-        }
-
-        if (pageSize == null) {
-            pageSize = Constant.COMMON_PAGE_SIZE;
-        }
-
-        PagedGridResult gridResult = articlePortalService.queryArticleListOfWriter(writerId, page, pageSize);
-        gridResult = rebuildArticleGrid(gridResult);
-        return GraceJSONResult.ok(gridResult);
-    }
-
-    @Override
-    public GraceJSONResult queryGoodArticleListOfWriter(String writerId) {
-
-        PagedGridResult gridResult = articlePortalService.queryGoodArticleListOfWriter(writerId);
-        return GraceJSONResult.ok(gridResult);
-    }
-
-    @Override
-    public GraceJSONResult detail(String articleId) {
-        ArticleDetailVO detailVO = articlePortalService.queryDetail(articleId);
-
-        Set<String> idSet = new HashSet();
-        idSet.add(detailVO.getPublishUserId());
-        List<AppUserVO> publisherList = getPublisherList(idSet);
-
-        if (!publisherList.isEmpty()) {
-            detailVO.setPublishUserName(publisherList.get(0).getNickname());
-        }
-
-        detailVO.setReadCounts(
-                getCountsFromRedis(Constant.REDIS_ARTICLE_READ_COUNTS + ":" + articleId));
-
-        return GraceJSONResult.ok(detailVO);
-    }
-
     private Integer getCountsFromRedis(String key) {
         String countsStr = redis.get(key);
         if (StringUtils.isBlank(countsStr)) {
             countsStr = "0";
         }
         return Integer.valueOf(countsStr);
-    }
-
-    @Override
-    public Integer readCounts(String articleId) {
-        System.out.println(articleId);
-        return getCountsFromRedis(Constant.REDIS_ARTICLE_READ_COUNTS + ":" + articleId);
-    }
-
-    @Override
-    public GraceJSONResult readArticle(String articleId, HttpServletRequest request) {
-        String userIp = IPUtil.getRequestIp(request);
-        // 设置针对当前用户ip的永久存在的key，存入到redis，表示该ip的用户已经阅读过了，无法累加阅读量
-        redis.setnx(Constant.REDIS_ALREADY_READ + ":" +  articleId + ":" + userIp, userIp);
-
-        redis.increment(Constant.REDIS_ARTICLE_READ_COUNTS + ":" + articleId, 1);
-        return GraceJSONResult.ok();
     }
 }

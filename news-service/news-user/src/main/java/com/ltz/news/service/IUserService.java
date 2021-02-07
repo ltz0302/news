@@ -2,7 +2,10 @@ package com.ltz.news.service;
 
 import com.ltz.news.pojo.bo.UpdateUserInfoBO;
 import com.ltz.news.pojo.AppUser;
+import com.ltz.news.pojo.vo.PublisherVO;
 import com.ltz.news.result.GraceJSONResult;
+
+import java.util.List;
 
 
 public interface IUserService {
@@ -27,11 +30,11 @@ public interface IUserService {
     GraceJSONResult getAccountInfo(String userId);
 
 
-//
-//    /**
-//     * 根据用户id查询用户
-//     */
-//    public List<PublisherVO> getUserList(List<String> userIdList);
+
+    /**
+     * 根据用户id查询用户
+     */
+    List<PublisherVO> getUserList(List<String> userIdList);
 
 
     /**

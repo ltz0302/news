@@ -11,17 +11,6 @@ public interface ICategoryService {
     GraceJSONResult saveOrUpdateCategory(SaveCategoryBO saveCategoryBO);
 
     /**
-     * 新增文章分类
-     */
-    void createCategory(Category category);
-
-    /**
-     * 修改文章分类列表
-     */
-    void modifyCategory(Category category);
-
-
-    /**
      * 获得文章分类列表
      */
     List<Category> queryCategoryList();

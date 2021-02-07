@@ -11,25 +11,35 @@ import com.ltz.news.pojo.Article;
 import com.ltz.news.pojo.Category;
 import com.ltz.news.pojo.NewsKafkaMessage;
 import com.ltz.news.pojo.bo.NewArticleBO;
+import com.ltz.news.pojo.vo.ArticleDetailVO;
 import com.ltz.news.result.GraceJSONResult;
 import com.ltz.news.result.ResponseStatusEnum;
 import com.ltz.news.service.IArticleService;
 import com.ltz.news.utils.JsonUtils;
 import com.ltz.news.utils.PagedGridResult;
-import com.ltz.news.utils.RedisOperator;
 import com.mongodb.client.gridfs.GridFSBucket;
+import freemarker.template.Configuration;
+import freemarker.template.Template;
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.bson.types.ObjectId;
 import org.n3r.idworker.Sid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
+import org.springframework.web.client.RestTemplate;
 import tk.mybatis.mapper.entity.Example;
 
+import java.io.File;
+import java.io.InputStream;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 @Service
@@ -46,6 +56,12 @@ public class ArticleServiceImpl implements IArticleService {
 
     @Autowired
     private KafkaTemplate<String, String> kafkaTemplate;
+
+    @Autowired
+    private GridFSBucket gridFSBucket;
+
+    @Autowired
+    private RestTemplate restTemplate;
 
     /**
      * 发布文章
@@ -144,15 +160,6 @@ public class ArticleServiceImpl implements IArticleService {
         articleMapperCustom.updateAppointToPublish();
     }
 
-    /**
-     * 更新单条文章为即时发布
-     *
-     * @param articleId
-     */
-    @Override
-    public void updateArticleToPublish(String articleId) {
-
-    }
 
     /**
      * 用户中心 - 查询我的文章列表
@@ -218,6 +225,20 @@ public class ArticleServiceImpl implements IArticleService {
         int res = articleMapper.updateByExampleSelective(pendingArticle, example);
         if (res != 1) {
             GraceException.display(ResponseStatusEnum.ARTICLE_REVIEW_ERROR);
+        }
+
+        if (pendingStatus == ArticleReviewStatus.SUCCESS.type) {
+            // 审核成功，生成文章详情页静态html
+            try {
+                String articleMongoId = createArticleHTMLToGridFS(articleId);
+                // 存储到对应的文章，进行关联保存
+                updateArticleToGridFS(articleId, articleMongoId);
+
+                // 发送消息到mq队列，让消费者监听并且执行下载html
+                doDownloadArticleHTMLByKafka(articleId, articleMongoId);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -313,8 +334,6 @@ public class ArticleServiceImpl implements IArticleService {
         deleteHTML(articleId);
     }
 
-    @Autowired
-    private GridFSBucket gridFSBucket;
     /**
      * 文章撤回删除后，删除静态化的html
      */
@@ -358,4 +377,55 @@ public class ArticleServiceImpl implements IArticleService {
         criteria.andEqualTo("id", articleId);
         return articleExample;
     }
+
+
+    private void doDownloadArticleHTMLByKafka(String articleId, String articleMongoId) {
+        kafkaTemplate.send(Constant.TOPIC, JSON.toJSONString(new NewsKafkaMessage(
+                0,articleId+"," + articleMongoId
+        )));
+    }
+
+
+    // 文章生成HTML
+    public String createArticleHTMLToGridFS(String articleId) throws Exception {
+
+        Configuration cfg = new Configuration(Configuration.getVersion());
+        String classpath = this.getClass().getResource("/").getPath();
+        cfg.setDirectoryForTemplateLoading(new File(classpath + "templates"));
+
+        Template template = cfg.getTemplate("detail.ftl", "utf-8");
+
+        // 获得文章的详情数据
+        ArticleDetailVO detailVO = getArticleDetail(articleId);
+        Map<String, Object> map = new HashMap<>();
+        map.put("articleDetail", detailVO);
+
+        String htmlContent = FreeMarkerTemplateUtils.processTemplateIntoString(template, map);
+
+        InputStream inputStream = IOUtils.toInputStream(htmlContent);
+        ObjectId fileId = gridFSBucket.uploadFromStream(detailVO.getId() + ".html",inputStream);
+        return fileId.toString();
+    }
+
+
+    // 发起远程调用rest，获得文章详情数据
+    public ArticleDetailVO getArticleDetail(String articleId) {
+        String url
+                = "http://www.imoocnews.com:8001/portal/article/detail?articleId=" + articleId;
+        ResponseEntity<GraceJSONResult> responseEntity
+                = restTemplate.getForEntity(url, GraceJSONResult.class);
+        GraceJSONResult bodyResult = responseEntity.getBody();
+        ArticleDetailVO detailVO = null;
+        if (bodyResult.getStatus() == 200) {
+            String detailJson = JsonUtils.objectToJson(bodyResult.getData());
+            detailVO = JsonUtils.jsonToPojo(detailJson, ArticleDetailVO.class);
+        }
+        return detailVO;
+    }
+
+
+
+
 }
+
+
